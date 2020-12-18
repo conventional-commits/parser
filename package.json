@@ -1,0 +1,24 @@
+{
+  "name": "@conventional-commits/parser",
+  "version": "1.0.0",
+  "description": "reference implementation of conventionalcommits.org spec",
+  "main": "index.js",
+  "scripts": {
+    "test": "c8 mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/conventional-commits/parser.git"
+  },
+  "keywords": [
+    "parser",
+    "conventional",
+    "commits"
+  ],
+  "author": "Ben Coe <bencoe@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conventional-commits/parser/issues"
+  },
+  "homepage": "https://github.com/conventional-commits/parser#readme"
+}
