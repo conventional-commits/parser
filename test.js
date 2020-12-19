@@ -7,7 +7,7 @@ require('chai')
   .use(chaiJestSnapshot)
   .should()
 
-describe('message', () => {
+describe('<message>', () => {
   beforeEach(function () {
     chaiJestSnapshot.configureUsingMochaContext(this)
   })

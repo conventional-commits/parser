@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`message <summary> parses summary with no scope 1`] = `
+exports[`<message> <summary> parses summary with no scope 1`] = `
 Object {
   "children": Array [
     Object {
@@ -21,7 +21,7 @@ Object {
 }
 `;
 
-exports[`message <summary> parses summary with scope 1`] = `
+exports[`<message> <summary> parses summary with scope 1`] = `
 Object {
   "children": Array [
     Object {
