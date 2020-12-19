@@ -1,47 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`message <summary> parses summary with no scope 1`] = `
-"{
-  \\"type\\": \\"message\\",
-  \\"children\\": [
-    {
-      \\"type\\": \\"summary\\",
-      \\"children\\": [
-        {
-          \\"type\\": \\"type\\",
-          \\"value\\": \\"fix\\"
-        },
-        {
-          \\"type\\": \\"text\\",
-          \\"value\\": \\"a really weird bug\\"
-        }
-      ]
-    }
-  ]
-}"
-`;
+exports[`message <summary> parses summary with no scope 1`] = `"{\\"type\\":\\"message\\",\\"children\\":[{\\"type\\":\\"summary\\",\\"children\\":[{\\"type\\":\\"type\\",\\"value\\":\\"fix\\"},{\\"type\\":\\"text\\",\\"value\\":\\"a really weird bug\\"}]}]}"`;
 
-exports[`message <summary> parses summary with scope 1`] = `
-"{
-  \\"type\\": \\"message\\",
-  \\"children\\": [
-    {
-      \\"type\\": \\"summary\\",
-      \\"children\\": [
-        {
-          \\"type\\": \\"type\\",
-          \\"value\\": \\"feat\\"
-        },
-        {
-          \\"type\\": \\"scope\\",
-          \\"value\\": \\"parser\\"
-        },
-        {
-          \\"type\\": \\"text\\",
-          \\"value\\": \\"add support for scopes\\"
-        }
-      ]
-    }
-  ]
-}"
-`;
+exports[`message <summary> parses summary with scope 1`] = `"{\\"type\\":\\"message\\",\\"children\\":[{\\"type\\":\\"summary\\",\\"children\\":[{\\"type\\":\\"type\\",\\"value\\":\\"feat\\"},{\\"type\\":\\"scope\\",\\"value\\":\\"parser\\"},{\\"type\\":\\"text\\",\\"value\\":\\"add support for scopes\\"}]}]}"`;

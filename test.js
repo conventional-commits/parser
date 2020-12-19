@@ -15,11 +15,11 @@ describe('message', () => {
   describe('<summary>', () => {
     it('parses summary with no scope', () => {
       const parsed = parser('fix: a really weird bug')
-      JSON.stringify(parsed, null, 2).should.matchSnapshot()
+      JSON.stringify(parsed).should.matchSnapshot()
     })
     it('parses summary with scope', () => {
       const parsed = parser('feat(parser): add support for scopes')
-      JSON.stringify(parsed, null, 2).should.matchSnapshot()
+      JSON.stringify(parsed).should.matchSnapshot()
     })
     it('throws error when ":" token is missing', () => {
       expect(() => {
