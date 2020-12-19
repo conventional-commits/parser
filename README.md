@@ -34,9 +34,7 @@ to keep this in sync with the written specification on conventionalcommits.org.
 <USP>          ::= "Any other Unicode “Space_Separator” code point"
 <whitespace>   ::= <ZWNBSP> | <TAB> | <VT> | <FF> | <SP> | <NBSP> | <USP>
 
-<message>      ::= <summary> <newline> <newline> 1*<footer>
-                |  <summary> <newline> <newline> <body> <newline> <newline> 1*<footer>
-                |  <summary> <newline> <newline> <body>
+<message>      ::= <summary> <newline> <newline> <body-footer>
                 |  <summary>
 
 <summary>      ::= <type> "(" <scope> ")" ":" <text>
@@ -44,6 +42,10 @@ to keep this in sync with the written specification on conventionalcommits.org.
 <type>         ::= 1*<any UTF8-octets except newline or parens or ":" or whitespace>
 <scope>        ::= 1*<any UTF8-octets except newline or parens>
 <text>         ::= 1*<any UTF8-octets except newline>
+
+<body-footer>  ::= 1*<footer>
+               ::= <body> <newline> 1*<body-footer>
+               ::= <body>
 
 <footer>       ::= <token> ":" <value>
 <token>        ::= <type> "(" <scope> ")"
@@ -53,8 +55,7 @@ to keep this in sync with the written specification on conventionalcommits.org.
                 |  <text>
 <continuation> ::= <newline> <whitespace> <text>
 
-<body>         ::= 1*<body-text>
-<body-text>    ::= <newline>? <text>
+<body>         ::= <text>? <newline>
 ```
 
 ### Parsing Notes:
