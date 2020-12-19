@@ -9,17 +9,16 @@ require('chai')
 
 describe('message', () => {
   beforeEach(function () {
-    this.currentTest.file = `./snapshots/${this.currentTest.file}`
     chaiJestSnapshot.configureUsingMochaContext(this)
   })
   describe('<summary>', () => {
     it('parses summary with no scope', () => {
       const parsed = parser('fix: a really weird bug')
-      JSON.stringify(parsed).should.matchSnapshot()
+      parsed.should.matchSnapshot()
     })
     it('parses summary with scope', () => {
       const parsed = parser('feat(parser): add support for scopes')
-      JSON.stringify(parsed).should.matchSnapshot()
+      parsed.should.matchSnapshot()
     })
     it('throws error when ":" token is missing', () => {
       expect(() => {
