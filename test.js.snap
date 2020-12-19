@@ -1,5 +1,367 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<message> <footer> parses BREAKING CHANGE literal as <token> 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "type",
+          "value": "fix",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "separator",
+              "value": ":",
+            },
+          ],
+          "type": "summary-sep",
+        },
+        Object {
+          "type": "text",
+          "value": "address major bug",
+        },
+      ],
+      "type": "summary",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "breaking-change",
+                  "value": "BREAKING CHANGE",
+                },
+              ],
+              "type": "token",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "type": "separator",
+                  "value": ":",
+                },
+              ],
+              "type": "summary-sep",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "this change is breaking",
+                },
+              ],
+              "type": "value",
+            },
+          ],
+          "type": "footer",
+        },
+      ],
+      "type": "body-footer",
+    },
+  ],
+  "type": "message",
+}
+`;
+
+exports[`<message> <footer> parses commit summary footer 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "type",
+          "value": "chore",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "separator",
+              "value": ":",
+            },
+          ],
+          "type": "summary-sep",
+        },
+        Object {
+          "type": "text",
+          "value": "contains multiple commits",
+        },
+      ],
+      "type": "summary",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "type",
+                  "value": "fix",
+                },
+                Object {
+                  "type": "scope",
+                  "value": "parser",
+                },
+              ],
+              "type": "token",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "type": "separator",
+                  "value": ":",
+                },
+              ],
+              "type": "summary-sep",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "address bug with parser",
+                },
+              ],
+              "type": "value",
+            },
+          ],
+          "type": "footer",
+        },
+      ],
+      "type": "body-footer",
+    },
+  ],
+  "type": "message",
+}
+`;
+
+exports[`<message> <footer> parses simple token/separator/value form of footer 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "type",
+          "value": "fix",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "separator",
+              "value": ":",
+            },
+          ],
+          "type": "summary-sep",
+        },
+        Object {
+          "type": "text",
+          "value": "address major bug",
+        },
+      ],
+      "type": "summary",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "type",
+                  "value": "Author",
+                },
+              ],
+              "type": "token",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "type": "separator",
+                  "value": ":",
+                },
+              ],
+              "type": "summary-sep",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "@byCedric",
+                },
+              ],
+              "type": "value",
+            },
+          ],
+          "type": "footer",
+        },
+      ],
+      "type": "body-footer",
+    },
+  ],
+  "type": "message",
+}
+`;
+
+exports[`<message> <footer> supports multiline BREAKING CHANGES, via continuation 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "type",
+          "value": "fix",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "separator",
+              "value": ":",
+            },
+          ],
+          "type": "summary-sep",
+        },
+        Object {
+          "type": "text",
+          "value": "address major bug",
+        },
+      ],
+      "type": "summary",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "breaking-change",
+                  "value": "BREAKING CHANGE",
+                },
+              ],
+              "type": "token",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "type": "separator",
+                  "value": ":",
+                },
+              ],
+              "type": "summary-sep",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "first line of breaking change",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "second line of breaking change",
+                    },
+                  ],
+                  "type": "continuation",
+                },
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "third line of breaking change",
+                    },
+                  ],
+                  "type": "continuation",
+                },
+              ],
+              "type": "value",
+            },
+          ],
+          "type": "footer",
+        },
+      ],
+      "type": "body-footer",
+    },
+  ],
+  "type": "message",
+}
+`;
+
+exports[`<message> <summary> parses breaking change marker 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "type",
+          "value": "feat",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "breaking-change",
+              "value": "!",
+            },
+            Object {
+              "type": "separator",
+              "value": ":",
+            },
+          ],
+          "type": "summary-sep",
+        },
+        Object {
+          "type": "text",
+          "value": "add support for scopes",
+        },
+      ],
+      "type": "summary",
+    },
+  ],
+  "type": "message",
+}
+`;
+
+exports[`<message> <summary> parses breaking change marker 2`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "type",
+          "value": "feat",
+        },
+        Object {
+          "type": "scope",
+          "value": "http parser",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "breaking-change",
+              "value": "!",
+            },
+            Object {
+              "type": "separator",
+              "value": ":",
+            },
+          ],
+          "type": "summary-sep",
+        },
+        Object {
+          "type": "text",
+          "value": "add support for scopes",
+        },
+      ],
+      "type": "summary",
+    },
+  ],
+  "type": "message",
+}
+`;
+
 exports[`<message> <summary> parses summary with no scope 1`] = `
 Object {
   "children": Array [
@@ -8,6 +370,15 @@ Object {
         Object {
           "type": "type",
           "value": "fix",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "separator",
+              "value": ":",
+            },
+          ],
+          "type": "summary-sep",
         },
         Object {
           "type": "text",
@@ -33,6 +404,15 @@ Object {
         Object {
           "type": "scope",
           "value": "parser",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "separator",
+              "value": ":",
+            },
+          ],
+          "type": "summary-sep",
         },
         Object {
           "type": "text",

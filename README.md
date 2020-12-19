@@ -34,31 +34,28 @@ to keep this in sync with the written specification on conventionalcommits.org.
 <USP>          ::= "Any other Unicode “Space_Separator” code point"
 <whitespace>   ::= <ZWNBSP> | <TAB> | <VT> | <FF> | <SP> | <NBSP> | <USP>
 
-<message>      ::= <summary> <newline> <newline> <body-footer>
+<message>      ::= <summary> <newline> <body-footer>
                 |  <summary>
 
-<summary>      ::= <type> "(" <scope> ")" ":" <text>
-                |  <type> ":" <text>
-<type>         ::= 1*<any UTF8-octets except newline or parens or ":" or whitespace>
+<summary>      ::= <type> "(" <scope> ")" <summary-sep> <text>
+                |  <type> <summary-sep> <text>
+<type>         ::= 1*<any UTF8-octets except newline or parens or ":" or "!:" or whitespace>
 <scope>        ::= 1*<any UTF8-octets except newline or parens>
 <text>         ::= 1*<any UTF8-octets except newline>
+<summary-sep>  ::= "!"? ":" *<whitespace>
 
 <body-footer>  ::= 1*<footer>
                ::= <body> <newline> 1*<body-footer>
                ::= <body>
 
-<footer>       ::= <token> ":" <value>
-<token>        ::= <type> "(" <scope> ")"
+<footer>       ::= <token> <separator> *<whitespace> <value> <newline>?
+<token>        ::= "BREAKING CHANGE"
+                |  <type> "(" <scope> ")"
                 |  <type>
-                |  "BREAKING CHANGE"
+<separator>    ::= <summary-sep> | ' #'
 <value>        ::= <text> 1*<continuation>
                 |  <text>
 <continuation> ::= <newline> <whitespace> <text>
 
 <body>         ::= <text>? <newline>
 ```
-
-### Parsing Notes:
-
-* The parser should ignore whitespace between symbols, i.e., `fix : the bug`
-  is equivalent to `fix: the bug`.
