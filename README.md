@@ -2,7 +2,20 @@
 
 Reference implementation of Conventional Commits specification.
 
+Outputs a tree structure based on the
+[uninst specification](https://github.com/syntax-tree/unist).
+
+## Usage
+
+```js
+const parser = require('@conventional-commits/parser')
+parser('feat(parser): add support for scopes')
+```
+
 ## The Grammar
+
+This parsing library is based on the following grammar. An effort will be made
+to keep this in sync with the written specification on conventionalcommits.org.
 
 ```bnf
 # See: https://tools.ietf.org/html/rfc3629#section-4
@@ -15,31 +28,34 @@ Reference implementation of Conventional Commits specification.
 <TAB>          ::= "U+0009"
 <VT>           ::= "U+000B"
 <FF>           ::= "U+000C"
-<SP>           ::= "U+000C"
+<SP>           ::= "U+0020"
 <NBSP>         ::= "U+00A0"
 # See: https://www.ecma-international.org/ecma-262/11.0/index.html#sec-white-space
 <USP>          ::= "Any other Unicode “Space_Separator” code point"
 <whitespace>   ::= <ZWNBSP> | <TAB> | <VT> | <FF> | <SP> | <NBSP> | <USP>
 
-<message>      ::= <summary> <newline> <newline> 1*<footer>
-                |  <summary> <newline> <newline> <body> <newline> <newline> 1*<footer>
-                |  <summary> <newline> <newline> <body>
+<message>      ::= <summary> <newline> <body-footer>
                 |  <summary>
 
-<summary>      ::= <type> "(" <scope> ")" ":" <summary-text>
-                |  <type> ":" <summary-text>
-<type>         ::= 1*<any UTF8-octets except newline or parens or ":" or whitespace>
+<summary>      ::= <type> "(" <scope> ")" <summary-sep> <text>
+                |  <type> <summary-sep> <text>
+<type>         ::= 1*<any UTF8-octets except newline or parens or ":" or "!:" or whitespace>
 <scope>        ::= 1*<any UTF8-octets except newline or parens>
-<summary-text> ::= 1*<any UTF8-octets except newline>
+<text>         ::= 1*<any UTF8-octets except newline>
+<summary-sep>  ::= "!"? ":" *<whitespace>
 
-<footer>       ::= <token> ":" <value>
-<token>        ::= <type> "(" <scope> ")"
+<body-footer>  ::= 1*<footer>
+               ::= <body> <newline> 1*<body-footer>
+               ::= <body>
+
+<footer>       ::= <token> <separator> *<whitespace> <value> <newline>?
+<token>        ::= "BREAKING CHANGE"
+                |  <type> "(" <scope> ")"
                 |  <type>
-                |  "BREAKING CHANGE"
-<value>        ::= <summary-text> 1*<continuation>
-                |  <summary-text>
-<continuation> ::= <newline> <whitespace> <summary-text>
+<separator>    ::= <summary-sep> | ' #'
+<value>        ::= <text> 1*<continuation>
+                |  <text>
+<continuation> ::= <newline> <whitespace> <text>
 
-<body>         ::= 1*<body-text>
-<body-text>    ::= <newline>? <summary-text>
+<body>         ::= <text>? <newline>
 ```

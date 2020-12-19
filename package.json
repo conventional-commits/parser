@@ -1,10 +1,13 @@
 {
   "name": "@conventional-commits/parser",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "reference implementation of conventionalcommits.org spec",
   "main": "index.js",
   "scripts": {
-    "test": "c8 mocha test.js"
+    "test": "c8 mocha test.js",
+    "test:snap": "CHAI_JEST_SNAPSHOT_UPDATE_ALL=true npm test",
+    "posttest": "standard",
+    "fix": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/conventional-commits/parser/issues"
   },
-  "homepage": "https://github.com/conventional-commits/parser#readme"
+  "homepage": "https://github.com/conventional-commits/parser#readme",
+  "devDependencies": {
+    "c8": "^7.3.5",
+    "chai": "^4.2.0",
+    "chai-jest-snapshot": "^2.0.0",
+    "mocha": "^8.2.1",
+    "standard": "^16.0.3"
+  }
 }
