@@ -39,8 +39,8 @@ to keep this in sync with the written specification on conventionalcommits.org.
                 |  <summary> <newline> <newline> <body>
                 |  <summary>
 
-<summary>      ::= <type> "(" <scope> ")" ":" *<whitespace> <text>
-                |  <type> ":" *<whitespace> <text>
+<summary>      ::= <type> "(" <scope> ")" ":" <text>
+                |  <type> ":" <text>
 <type>         ::= 1*<any UTF8-octets except newline or parens or ":" or whitespace>
 <scope>        ::= 1*<any UTF8-octets except newline or parens>
 <text>         ::= 1*<any UTF8-octets except newline>
@@ -56,3 +56,8 @@ to keep this in sync with the written specification on conventionalcommits.org.
 <body>         ::= 1*<body-text>
 <body-text>    ::= <newline>? <text>
 ```
+
+### Parsing Notes:
+
+* The parser should ignore whitespace between symbols, i.e., `fix : the bug`
+  is equivalent to `fix: the bug`.

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parser <summary> parses summary with no scope 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "type",
+          "value": "fix",
+        },
+        Object {
+          "type": "text",
+          "value": "a really weird bug",
+        },
+      ],
+      "type": "summary",
+    },
+  ],
+  "type": "message",
+}
+`;
+
+exports[`parser <summary> parses summary with scope 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "type",
+          "value": "feat",
+        },
+        Object {
+          "type": "scope",
+          "value": "parser",
+        },
+        Object {
+          "type": "text",
+          "value": "add support for scopes",
+        },
+      ],
+      "type": "summary",
+    },
+  ],
+  "type": "message",
+}
+`;

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "c8 mocha test.js",
+    "test:snap": "CHAI_JEST_SNAPSHOT_UPDATE_ALL=true npm test",
     "posttest": "standard",
     "fix": "standard --fix"
   },
@@ -25,6 +26,8 @@
   "homepage": "https://github.com/conventional-commits/parser#readme",
   "devDependencies": {
     "c8": "^7.3.5",
+    "chai": "^4.2.0",
+    "chai-jest-snapshot": "^2.0.0",
     "mocha": "^8.2.1",
     "standard": "^16.0.3"
   }
