@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`parser <summary> parses summary with no scope 1`] = `
+exports[`message <summary> parses summary with no scope 1`] = `
 "{
   \\"type\\": \\"message\\",
   \\"children\\": [
@@ -21,7 +21,7 @@ exports[`parser <summary> parses summary with no scope 1`] = `
 }"
 `;
 
-exports[`parser <summary> parses summary with scope 1`] = `
+exports[`message <summary> parses summary with scope 1`] = `
 "{
   \\"type\\": \\"message\\",
   \\"children\\": [

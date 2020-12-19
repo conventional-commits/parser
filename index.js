@@ -8,7 +8,7 @@ const { isWhitespace, isNewline, isParens } = require('./lib/type-checks')
  *                 |  <summary>
  */
 function message (commitText) {
-  const scanner = new Scanner(commitText)
+  const scanner = new Scanner(commitText.trim())
   const node = {
     type: 'message',
     children: []
@@ -18,8 +18,8 @@ function message (commitText) {
 }
 
 /*
- * <summary>      ::= <type> "(" <scope> ")" ":" *<whitespace> <text>
- *                 |  <type> ":" *<whitespace> <text>
+ * <summary>      ::= <type> "(" <scope> ")" ":" <text>
+ *                 |  <type> ":" <text>
  */
 function summary (scanner) {
   const node = {
@@ -29,18 +29,20 @@ function summary (scanner) {
 
   node.children.push(type(scanner))
   if (scanner.peek() === ':') {
-    // <type> ":" *<whitespace> <text>
+    // <type> ":" <text>
     scanner.next()
     node.children.push(text(scanner))
   } else if (scanner.peek() === '(') {
-    // <type> "(" <scope> ")" ":" *<whitespace> <text>
+    // <type> "(" <scope> ")" ":" <text>
     scanner.next()
     node.children.push(scope(scanner))
-    if (scanner.peek() !== ')'); // TODO(bcoe): handle parsing errors.
-    scanner.next()
-    if (scanner.peek() !== ':'); // TODO(bcoe): handle parsing errors.
+    if (scanner.peek() !== ')') throwInvalidToken(scanner, [')'])
+    scanner.nextIgnoreWhitespace()
+    if (scanner.peek() !== ':') throwInvalidToken(scanner, [':'])
     scanner.next()
     node.children.push(text(scanner))
+  } else {
+    throwInvalidToken(scanner, [':', '('])
   }
   return node
 }
@@ -103,6 +105,14 @@ function scope (scanner) {
   }
   scanner.consumeWhitespace()
   return node
+}
+
+function throwInvalidToken (scanner, expected) {
+  if (scanner.eof()) {
+    throw Error(`unexpected token EOF valid tokens [${expected.join(', ')}]`)
+  } else {
+    throw Error(`unexpected token '${scanner.peek()}' at position ${scanner.position()} valid tokens [${expected.join(', ')}]`)
+  }
 }
 
 module.exports = message
