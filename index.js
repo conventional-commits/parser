@@ -128,23 +128,32 @@ function text (scanner) {
  * <summary-sep>  ::= "!"? ":" *<whitespace>
  */
 function summarySep (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'summary-sep',
     children: []
   }
   if (isSummarySep(scanner.peek())) {
-    // todo: position needs to be broken up for the `!:` token
     scanner.next()
+    // manually offset the end with half the "!:" size
+    const breakingEnd = scanner.position()
+    breakingEnd.offset--
+    breakingEnd.column--
     node.children.push({
       type: 'breaking-change',
-      value: '!'
+      value: '!',
+      position: { start, end: breakingEnd }
     })
+    // manually offset the start with half the "!:" size
+    const separatorStart = scanner.position()
+    separatorStart.offset--
+    separatorStart.column--
     node.children.push({
       type: 'separator',
-      value: ':'
+      value: ':',
+      position: { start: separatorStart, end: scanner.position() }
     })
   } else if (scanner.peek() === ':') {
-    const start = scanner.position()
     scanner.next()
     node.children.push({
       type: 'separator',
