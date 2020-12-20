@@ -7,7 +7,8 @@
     "test": "c8 mocha test.js",
     "test:snap": "CHAI_JEST_SNAPSHOT_UPDATE_ALL=true npm test",
     "posttest": "standard",
-    "fix": "standard --fix"
+    "fix": "standard --fix",
+    "inspect": "node inspect.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
     "chai": "^4.2.0",
     "chai-jest-snapshot": "^2.0.0",
     "mocha": "^8.2.1",
-    "standard": "^16.0.3"
+    "standard": "^16.0.3",
+    "unist-util-inspect": "^6.0.1",
+    "yargs": "^16.2.0"
   }
 }
