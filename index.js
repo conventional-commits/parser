@@ -410,8 +410,7 @@ function invalidToken (scanner, expected) {
     return Error(`unexpected token EOF valid tokens [${expected.join(', ')}]`)
   } else {
     const pos = scanner.position()
-    const posString = `{ line: ${pos.line}, column: ${pos.column}, offset: ${pos.offset} }`
-    return Error(`unexpected token '${scanner.peek()}' at position ${posString} valid tokens [${expected.join(', ')}]`)
+    return Error(`unexpected token '${scanner.peek()}' at position ${pos.line}:${pos.column} valid tokens [${expected.join(', ')}]`)
   }
 }
 
