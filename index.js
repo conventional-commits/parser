@@ -140,8 +140,8 @@ function summarySep (scanner) {
     scanner.next()
     // manually offset the end with half the "!:" size
     const breakingEnd = scanner.position()
-    breakingEnd.offset--
-    breakingEnd.column--
+    breakingEnd.offset--;
+    breakingEnd.column--;
     node.children.push({
       type: 'breaking-change',
       value: '!',
@@ -149,8 +149,8 @@ function summarySep (scanner) {
     })
     // manually offset the start with half the "!:" size
     const separatorStart = scanner.position()
-    separatorStart.offset--
-    separatorStart.column--
+    separatorStart.offset--;
+    separatorStart.column--;
     node.children.push({
       type: 'separator',
       value: ':',
