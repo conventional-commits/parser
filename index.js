@@ -7,6 +7,7 @@ const { isWhitespace, isNewline, isParens, isSummarySep } = require('./lib/type-
  */
 function message (commitText) {
   const scanner = new Scanner(commitText.trim())
+  const start = scanner.position()
   const node = {
     type: 'message',
     children: []
@@ -27,6 +28,7 @@ function message (commitText) {
     invalidToken(scanner, ['none'])
   }
   node.children.push(bodyFooter(scanner))
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -36,6 +38,7 @@ function message (commitText) {
  *
  */
 function summary (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'summary',
     children: []
@@ -73,6 +76,7 @@ function summary (scanner) {
   } else {
     return invalidToken(scanner, [':', '('])
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -80,6 +84,7 @@ function summary (scanner) {
  * <type>         ::= 1*<any UTF8-octets except newline or parens or ":" or "!:" or whitespace>
  */
 function type (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'type',
     value: ''
@@ -94,6 +99,7 @@ function type (scanner) {
   if (node.value === '') {
     return invalidToken(scanner, ['type'])
   } else {
+    node.position = { start, end: scanner.position() }
     return node
   }
 }
@@ -102,6 +108,7 @@ function type (scanner) {
  * <text>         ::= 1*<any UTF8-octets except newline>
  */
 function text (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'text',
     value: ''
@@ -113,6 +120,7 @@ function text (scanner) {
     }
     node.value += scanner.next()
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -125,6 +133,7 @@ function summarySep (scanner) {
     children: []
   }
   if (isSummarySep(scanner.peek())) {
+    // todo: position needs to be broken up for the `!:` token
     scanner.next()
     node.children.push({
       type: 'breaking-change',
@@ -135,10 +144,12 @@ function summarySep (scanner) {
       value: ':'
     })
   } else if (scanner.peek() === ':') {
+    const start = scanner.position()
     scanner.next()
     node.children.push({
       type: 'separator',
-      value: ':'
+      value: ':',
+      position: { start, end: scanner.position() }
     })
   } else {
     return invalidToken(scanner, [':'])
@@ -151,6 +162,7 @@ function summarySep (scanner) {
  * <scope>        ::= 1*<any UTF8-octets except newline or parens>
  */
 function scope (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'scope',
     value: ''
@@ -166,6 +178,7 @@ function scope (scanner) {
   if (node.value === '') {
     return invalidToken(scanner, ['scope'])
   } else {
+    node.position = { start, end: scanner.position() }
     return node
   }
 }
@@ -192,6 +205,7 @@ function bodyFooter (scanner) {
       node.children.push(f)
     }
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -199,6 +213,7 @@ function bodyFooter (scanner) {
  * <footer>       ::= <token> <separator> *<whitespace> <value> <newline>?
 */
 function footer (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'footer',
     children: []
@@ -230,6 +245,7 @@ function footer (scanner) {
   if (isNewline(scanner.peek())) {
     scanner.next()
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -251,6 +267,7 @@ function token (scanner) {
     scanner.rewind(start)
   } else {
     node.children.push(b)
+    node.position = { start, end: scanner.position() }
     return node
   }
 
@@ -273,6 +290,7 @@ function token (scanner) {
       scanner.next()
     }
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -280,6 +298,7 @@ function token (scanner) {
  * "BREAKING CHANGE"
  */
 function breakingChangeLiteral (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'breaking-change',
     value: ''
@@ -291,6 +310,7 @@ function breakingChangeLiteral (scanner) {
   if (node.value === '') {
     return invalidToken(scanner, ['BREAKING CHANGE'])
   } else {
+    node.position = { start, end: scanner.position() }
     return node
   }
 }
@@ -300,6 +320,7 @@ function breakingChangeLiteral (scanner) {
  *                 |  <text>
  */
 function value (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'value',
     children: []
@@ -310,6 +331,7 @@ function value (scanner) {
   while (!((c = continuation(scanner)) instanceof Error)) {
     node.children.push(c)
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -334,6 +356,7 @@ function continuation (scanner) {
   } else {
     return invalidToken(scanner, ['continuation'])
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -366,6 +389,7 @@ function separator (scanner) {
   } else {
     return invalidToken(scanner, ['separator'])
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -373,7 +397,9 @@ function invalidToken (scanner, expected) {
   if (scanner.eof()) {
     return Error(`unexpected token EOF valid tokens [${expected.join(', ')}]`)
   } else {
-    return Error(`unexpected token '${scanner.peek()}' at position ${scanner.position()} valid tokens [${expected.join(', ')}]`)
+    const pos = scanner.position()
+    const posString = `{ line: ${pos.line}, column: ${pos.column}, offset: ${pos.offset} }`
+    return Error(`unexpected token '${scanner.peek()}' at position ${posString} valid tokens [${expected.join(', ')}]`)
   }
 }
 

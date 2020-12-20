@@ -29,10 +29,10 @@ describe('<message>', () => {
     it('throws error when ":" token is missing', () => {
       expect(() => {
         parser('feat add support for scopes')
-      }).to.throw("unexpected token ' ' at position 4 valid tokens [:, (]")
+      }).to.throw("unexpected token ' ' at position { line: 1, column: 5, offset: 4 } valid tokens [:, (]")
       expect(() => {
         parser('feat( foo ) add support for scopes')
-      }).to.throw("unexpected token ' ' at position 11 valid tokens [:]")
+      }).to.throw("unexpected token ' ' at position { line: 1, column: 12, offset: 11 } valid tokens [:]")
     })
     it('throws error when closing ")" token is missing', () => {
       expect(() => {
