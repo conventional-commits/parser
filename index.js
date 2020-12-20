@@ -137,6 +137,7 @@ function summarySep (scanner) {
     children: []
   }
   if (isSummarySep(scanner.peek())) {
+    // todo: position needs to be broken up for the `!:` token
     scanner.next()
     // manually offset the end with half the "!:" size
     const breakingEnd = scanner.position()
@@ -157,6 +158,7 @@ function summarySep (scanner) {
       position: { start: separatorStart, end: scanner.position() }
     })
   } else if (scanner.peek() === ':') {
+    const start = scanner.position()
     scanner.next()
     node.children.push({
       type: 'separator',
