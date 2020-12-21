@@ -8,7 +8,7 @@
     "test:snap": "CHAI_JEST_SNAPSHOT_UPDATE_ALL=true npm test",
     "posttest": "standard",
     "fix": "standard --fix",
-    "inspect": "node inspect.js"
+    "inspect": "./scripts/inspect.js"
   },
   "repository": {
     "type": "git",
