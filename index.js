@@ -28,7 +28,7 @@ function message (commitText) {
   if (isNewline(scanner.peek())) {
     scanner.next()
   } else {
-    return invalidToken(scanner, ['none'])
+    throw invalidToken(scanner, ['none'])
   }
   node.children.push(bodyFooter(scanner))
   node.position = { start, end: scanner.position() }
