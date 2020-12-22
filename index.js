@@ -54,10 +54,11 @@ function summary (scanner) {
     node.children.push(t)
   }
 
+  let s
   if (scanner.peek() === '(') {
     // <type> "(" <scope> ")" ...
     scanner.next()
-    const s = scope(scanner)
+    s = scope(scanner)
     if (s instanceof Error) {
       return s
     } else {
@@ -78,7 +79,7 @@ function summary (scanner) {
   // ... ": " <text>
   const sep = separator(scanner)
   if (sep instanceof Error) {
-    return invalidToken(scanner, [':', '(', '!'])
+    return invalidToken(scanner, [':', '!', !s && '('])
   } else {
     node.children.push(sep)
   }
@@ -379,11 +380,12 @@ function separator (scanner) {
 }
 
 function invalidToken (scanner, expected) {
+  const validTokens = expected.filter(Boolean).join(', ')
   if (scanner.eof()) {
-    return Error(`unexpected token EOF valid tokens [${expected.join(', ')}]`)
+    return Error(`unexpected token EOF valid tokens [${validTokens}]`)
   } else {
     const pos = scanner.position()
-    return Error(`unexpected token '${scanner.peek()}' at position ${pos.line}:${pos.column} valid tokens [${expected.join(', ')}]`)
+    return Error(`unexpected token '${scanner.peek()}' at position ${pos.line}:${pos.column} valid tokens [${validTokens}]`)
   }
 }
 
