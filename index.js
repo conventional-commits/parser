@@ -281,12 +281,9 @@ function breakingChange (scanner) {
     value: ''
   }
   if (scanner.peek() === '!') {
-    scanner.next()
-    node.value = '!'
-  }
-  if (scanner.peekLiteral('BREAKING CHANGE')) {
-    const literal = scanner.next('BREAKING CHANGE'.length)
-    node.value = literal
+    node.value = scanner.next()
+  } else if (scanner.peekLiteral('BREAKING CHANGE')) {
+    node.value = scanner.next('BREAKING CHANGE'.length)
   }
   if (node.value === '') {
     return invalidToken(scanner, ['BREAKING CHANGE'])
