@@ -71,15 +71,17 @@ function summary (scanner) {
   }
 
   // ... ["!"] ...
-  const b = breakingChange(scanner)
-  if (!(b instanceof Error)) {
+  let b = breakingChange(scanner)
+  if (b instanceof Error) {
+    b = null
+  } else {
     node.children.push(b)
   }
 
   // ... ": " <text>
   const sep = separator(scanner)
   if (sep instanceof Error) {
-    return invalidToken(scanner, [':', '!', !s && '('])
+    return invalidToken(scanner, [!s && '(', !b && '!', ':'])
   } else {
     node.children.push(sep)
   }
