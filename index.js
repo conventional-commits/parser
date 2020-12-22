@@ -92,7 +92,7 @@ function summary (scanner) {
 }
 
 /*
- * <type>         ::= 1*<any UTF8-octets except newline or parens or ":" or "!:" or whitespace>
+ * <type>         ::= 1*<any UTF8-octets except newline or parens or ["!"] ":" or whitespace>
  */
 function type (scanner) {
   const start = scanner.position()
@@ -227,7 +227,7 @@ function footer (scanner) {
 }
 
 /*
- * <token>        ::= "BREAKING CHANGE"
+ * <token>        ::= <breaking-change>
  *                 |  <type> "(" <scope> ")"
  *                 |  <type>
  */
@@ -272,7 +272,7 @@ function token (scanner) {
 }
 
 /*
- * "BREAKING CHANGE"
+ * <breaking-change> ::= "!" | "BREAKING CHANGE"
  */
 function breakingChange (scanner) {
   const start = scanner.position()
