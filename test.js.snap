@@ -22,25 +22,20 @@ Object {
           "value": "fix",
         },
         Object {
-          "children": Array [
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 1,
-                  "offset": 4,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 1,
-                  "offset": 3,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
             },
-          ],
-          "type": "summary-sep",
+            "start": Object {
+              "column": 4,
+              "line": 1,
+              "offset": 3,
+            },
+          },
+          "type": "separator",
+          "value": ": ",
         },
         Object {
           "position": Object {
@@ -111,25 +106,20 @@ Object {
               "type": "token",
             },
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 17,
-                      "line": 2,
-                      "offset": 39,
-                    },
-                    "start": Object {
-                      "column": 16,
-                      "line": 2,
-                      "offset": 38,
-                    },
-                  },
-                  "type": "separator",
-                  "value": ":",
+              "position": Object {
+                "end": Object {
+                  "column": 18,
+                  "line": 2,
+                  "offset": 40,
                 },
-              ],
-              "type": "summary-sep",
+                "start": Object {
+                  "column": 16,
+                  "line": 2,
+                  "offset": 38,
+                },
+              },
+              "type": "separator",
+              "value": ": ",
             },
             Object {
               "children": Array [
@@ -233,25 +223,20 @@ Object {
           "value": "chore",
         },
         Object {
-          "children": Array [
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 7,
-                  "line": 1,
-                  "offset": 6,
-                },
-                "start": Object {
-                  "column": 6,
-                  "line": 1,
-                  "offset": 5,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          "position": Object {
+            "end": Object {
+              "column": 8,
+              "line": 1,
+              "offset": 7,
             },
-          ],
-          "type": "summary-sep",
+            "start": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+          },
+          "type": "separator",
+          "value": ": ",
         },
         Object {
           "position": Object {
@@ -338,25 +323,20 @@ Object {
               "type": "token",
             },
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 13,
-                      "line": 2,
-                      "offset": 45,
-                    },
-                    "start": Object {
-                      "column": 12,
-                      "line": 2,
-                      "offset": 44,
-                    },
-                  },
-                  "type": "separator",
-                  "value": ":",
+              "position": Object {
+                "end": Object {
+                  "column": 14,
+                  "line": 2,
+                  "offset": 46,
                 },
-              ],
-              "type": "summary-sep",
+                "start": Object {
+                  "column": 12,
+                  "line": 2,
+                  "offset": 44,
+                },
+              },
+              "type": "separator",
+              "value": ": ",
             },
             Object {
               "children": Array [
@@ -460,25 +440,20 @@ Object {
           "value": "fix",
         },
         Object {
-          "children": Array [
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 1,
-                  "offset": 4,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 1,
-                  "offset": 3,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
             },
-          ],
-          "type": "summary-sep",
+            "start": Object {
+              "column": 4,
+              "line": 1,
+              "offset": 3,
+            },
+          },
+          "type": "separator",
+          "value": ": ",
         },
         Object {
           "position": Object {
@@ -549,25 +524,20 @@ Object {
               "type": "token",
             },
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 8,
-                      "line": 2,
-                      "offset": 30,
-                    },
-                    "start": Object {
-                      "column": 7,
-                      "line": 2,
-                      "offset": 29,
-                    },
-                  },
-                  "type": "separator",
-                  "value": ":",
+              "position": Object {
+                "end": Object {
+                  "column": 9,
+                  "line": 2,
+                  "offset": 31,
                 },
-              ],
-              "type": "summary-sep",
+                "start": Object {
+                  "column": 7,
+                  "line": 2,
+                  "offset": 29,
+                },
+              },
+              "type": "separator",
+              "value": ": ",
             },
             Object {
               "children": Array [
@@ -671,25 +641,20 @@ Object {
           "value": "fix",
         },
         Object {
-          "children": Array [
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 1,
-                  "offset": 4,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 1,
-                  "offset": 3,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
             },
-          ],
-          "type": "summary-sep",
+            "start": Object {
+              "column": 4,
+              "line": 1,
+              "offset": 3,
+            },
+          },
+          "type": "separator",
+          "value": ": ",
         },
         Object {
           "position": Object {
@@ -760,25 +725,20 @@ Object {
               "type": "token",
             },
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 17,
-                      "line": 2,
-                      "offset": 39,
-                    },
-                    "start": Object {
-                      "column": 16,
-                      "line": 2,
-                      "offset": 38,
-                    },
-                  },
-                  "type": "separator",
-                  "value": ":",
+              "position": Object {
+                "end": Object {
+                  "column": 18,
+                  "line": 2,
+                  "offset": 40,
                 },
-              ],
-              "type": "summary-sep",
+                "start": Object {
+                  "column": 16,
+                  "line": 2,
+                  "offset": 38,
+                },
+              },
+              "type": "separator",
+              "value": ": ",
             },
             Object {
               "children": Array [
@@ -948,41 +908,36 @@ Object {
           "value": "feat",
         },
         Object {
-          "children": Array [
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 6,
-                  "line": 1,
-                  "offset": 5,
-                },
-                "start": Object {
-                  "column": 5,
-                  "line": 1,
-                  "offset": 4,
-                },
-              },
-              "type": "breaking-change",
-              "value": "!",
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 7,
-                  "line": 1,
-                  "offset": 6,
-                },
-                "start": Object {
-                  "column": 6,
-                  "line": 1,
-                  "offset": 5,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
             },
-          ],
-          "type": "summary-sep",
+          },
+          "type": "breaking-change",
+          "value": "!",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 8,
+              "line": 1,
+              "offset": 7,
+            },
+            "start": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+          },
+          "type": "separator",
+          "value": ": ",
         },
         Object {
           "position": Object {
@@ -1070,41 +1025,36 @@ Object {
           "value": "http parser",
         },
         Object {
-          "children": Array [
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 19,
-                  "line": 1,
-                  "offset": 18,
-                },
-                "start": Object {
-                  "column": 18,
-                  "line": 1,
-                  "offset": 17,
-                },
-              },
-              "type": "breaking-change",
-              "value": "!",
+          "position": Object {
+            "end": Object {
+              "column": 19,
+              "line": 1,
+              "offset": 18,
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 20,
-                  "line": 1,
-                  "offset": 19,
-                },
-                "start": Object {
-                  "column": 19,
-                  "line": 1,
-                  "offset": 18,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+            "start": Object {
+              "column": 18,
+              "line": 1,
+              "offset": 17,
             },
-          ],
-          "type": "summary-sep",
+          },
+          "type": "breaking-change",
+          "value": "!",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 21,
+              "line": 1,
+              "offset": 20,
+            },
+            "start": Object {
+              "column": 19,
+              "line": 1,
+              "offset": 18,
+            },
+          },
+          "type": "separator",
+          "value": ": ",
         },
         Object {
           "position": Object {
@@ -1176,25 +1126,20 @@ Object {
           "value": "fix",
         },
         Object {
-          "children": Array [
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 1,
-                  "offset": 4,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 1,
-                  "offset": 3,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
             },
-          ],
-          "type": "summary-sep",
+            "start": Object {
+              "column": 4,
+              "line": 1,
+              "offset": 3,
+            },
+          },
+          "type": "separator",
+          "value": ": ",
         },
         Object {
           "position": Object {
@@ -1282,25 +1227,20 @@ Object {
           "value": "parser",
         },
         Object {
-          "children": Array [
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 14,
-                  "line": 1,
-                  "offset": 13,
-                },
-                "start": Object {
-                  "column": 13,
-                  "line": 1,
-                  "offset": 12,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          "position": Object {
+            "end": Object {
+              "column": 15,
+              "line": 1,
+              "offset": 14,
             },
-          ],
-          "type": "summary-sep",
+            "start": Object {
+              "column": 13,
+              "line": 1,
+              "offset": 12,
+            },
+          },
+          "type": "separator",
+          "value": ": ",
         },
         Object {
           "position": Object {
