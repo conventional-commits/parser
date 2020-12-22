@@ -7,6 +7,7 @@ const { isWhitespace, isNewline, isParens, isSummarySep } = require('./lib/type-
  */
 function message (commitText) {
   const scanner = new Scanner(commitText.trim())
+  const start = scanner.position()
   const node = {
     type: 'message',
     children: []
@@ -18,7 +19,10 @@ function message (commitText) {
   } else {
     node.children.push(s)
   }
-  if (scanner.eof()) return node
+  if (scanner.eof()) {
+    node.position = { start, end: scanner.position() }
+    return node
+  }
 
   // <summary> <newline> <body-footer>
   if (isNewline(scanner.peek())) {
@@ -27,6 +31,7 @@ function message (commitText) {
     invalidToken(scanner, ['none'])
   }
   node.children.push(bodyFooter(scanner))
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -36,6 +41,7 @@ function message (commitText) {
  *
  */
 function summary (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'summary',
     children: []
@@ -73,6 +79,7 @@ function summary (scanner) {
   } else {
     return invalidToken(scanner, [':', '('])
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -80,6 +87,7 @@ function summary (scanner) {
  * <type>         ::= 1*<any UTF8-octets except newline or parens or ":" or "!:" or whitespace>
  */
 function type (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'type',
     value: ''
@@ -94,6 +102,7 @@ function type (scanner) {
   if (node.value === '') {
     return invalidToken(scanner, ['type'])
   } else {
+    node.position = { start, end: scanner.position() }
     return node
   }
 }
@@ -102,6 +111,7 @@ function type (scanner) {
  * <text>         ::= 1*<any UTF8-octets except newline>
  */
 function text (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'text',
     value: ''
@@ -113,6 +123,7 @@ function text (scanner) {
     }
     node.value += scanner.next()
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -120,25 +131,37 @@ function text (scanner) {
  * <summary-sep>  ::= "!"? ":" *<whitespace>
  */
 function summarySep (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'summary-sep',
     children: []
   }
   if (isSummarySep(scanner.peek())) {
     scanner.next()
+    // manually offset the end with half the "!:" size
+    const breakingEnd = scanner.position()
+    breakingEnd.offset--
+    breakingEnd.column--
     node.children.push({
       type: 'breaking-change',
-      value: '!'
+      value: '!',
+      position: { start, end: breakingEnd }
     })
+    // manually offset the start with half the "!:" size
+    const separatorStart = scanner.position()
+    separatorStart.offset--
+    separatorStart.column--
     node.children.push({
       type: 'separator',
-      value: ':'
+      value: ':',
+      position: { start: separatorStart, end: scanner.position() }
     })
   } else if (scanner.peek() === ':') {
     scanner.next()
     node.children.push({
       type: 'separator',
-      value: ':'
+      value: ':',
+      position: { start, end: scanner.position() }
     })
   } else {
     return invalidToken(scanner, [':'])
@@ -151,6 +174,7 @@ function summarySep (scanner) {
  * <scope>        ::= 1*<any UTF8-octets except newline or parens>
  */
 function scope (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'scope',
     value: ''
@@ -166,6 +190,7 @@ function scope (scanner) {
   if (node.value === '') {
     return invalidToken(scanner, ['scope'])
   } else {
+    node.position = { start, end: scanner.position() }
     return node
   }
 }
@@ -192,6 +217,7 @@ function bodyFooter (scanner) {
       node.children.push(f)
     }
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -199,6 +225,7 @@ function bodyFooter (scanner) {
  * <footer>       ::= <token> <separator> *<whitespace> <value> <newline>?
 */
 function footer (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'footer',
     children: []
@@ -230,6 +257,7 @@ function footer (scanner) {
   if (isNewline(scanner.peek())) {
     scanner.next()
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -251,6 +279,7 @@ function token (scanner) {
     scanner.rewind(start)
   } else {
     node.children.push(b)
+    node.position = { start, end: scanner.position() }
     return node
   }
 
@@ -273,6 +302,7 @@ function token (scanner) {
       scanner.next()
     }
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -280,6 +310,7 @@ function token (scanner) {
  * "BREAKING CHANGE"
  */
 function breakingChangeLiteral (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'breaking-change',
     value: ''
@@ -291,6 +322,7 @@ function breakingChangeLiteral (scanner) {
   if (node.value === '') {
     return invalidToken(scanner, ['BREAKING CHANGE'])
   } else {
+    node.position = { start, end: scanner.position() }
     return node
   }
 }
@@ -300,6 +332,7 @@ function breakingChangeLiteral (scanner) {
  *                 |  <text>
  */
 function value (scanner) {
+  const start = scanner.position()
   const node = {
     type: 'value',
     children: []
@@ -310,6 +343,7 @@ function value (scanner) {
   while (!((c = continuation(scanner)) instanceof Error)) {
     node.children.push(c)
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -334,6 +368,7 @@ function continuation (scanner) {
   } else {
     return invalidToken(scanner, ['continuation'])
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -366,6 +401,7 @@ function separator (scanner) {
   } else {
     return invalidToken(scanner, ['separator'])
   }
+  node.position = { start, end: scanner.position() }
   return node
 }
 
@@ -373,7 +409,8 @@ function invalidToken (scanner, expected) {
   if (scanner.eof()) {
     return Error(`unexpected token EOF valid tokens [${expected.join(', ')}]`)
   } else {
-    return Error(`unexpected token '${scanner.peek()}' at position ${scanner.position()} valid tokens [${expected.join(', ')}]`)
+    const pos = scanner.position()
+    return Error(`unexpected token '${scanner.peek()}' at position ${pos.line}:${pos.column} valid tokens [${expected.join(', ')}]`)
   }
 }
 
