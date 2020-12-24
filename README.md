@@ -1,5 +1,9 @@
 ## Conventional Commits Parser
 
+![ci](https://github.com/conventional-commits/parser/workflows/ci/badge.svg)
+![nycrc config on GitHub](https://img.shields.io/nycrc/conventional-commits/parser)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
 Reference implementation of Conventional Commits specification.
 
 Outputs a tree structure based on the
