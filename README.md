@@ -3,19 +3,38 @@
 Reference implementation of Conventional Commits specification.
 
 Outputs a tree structure based on the
-[uninst specification](https://github.com/syntax-tree/unist).
+[unist specification](https://github.com/syntax-tree/unist).
+
+## Install
+
+```
+npm i @conventional-commits/parser
+```
 
 ## Usage
 
 ```js
-const parser = require('@conventional-commits/parser')
-parser('feat(parser): add support for scopes')
+const {parser} = require('@conventional-commits/parser')
+const ast = parser('feat(parser): add support for scopes')
 ```
+
+## API
+
+### `parser(text: string)`
+
+Runs conventional commits parser on the string provided.
+
+* Returns: Object adhering to [unist spec](https://github.com/syntax-tree/unist).
+
+### `toConventionalChangelogFormat(ast: object)`
+
+Given an `object`, representing the parsed commit messages in `unist` format,
+returns an object useable by the [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) ecosystem of libraries.
 
 ## The Grammar
 
-This parsing library is based on the following grammar. An effort will be made
-to keep this in sync with the written specification on conventionalcommits.org.
+The parser is based on the following grammar. An effort is made to keep this
+in sync with the written specification on conventionalcommits.org.
 
 ```ebnf
 /* See: https://tools.ietf.org/html/rfc3629#section-4 */

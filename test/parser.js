@@ -1,7 +1,7 @@
 const { describe, beforeEach, it } = require('mocha')
 const { expect } = require('chai')
 const chaiJestSnapshot = require('chai-jest-snapshot')
-const parser = require('./')
+const { parser } = require('../')
 
 require('chai')
   .use(chaiJestSnapshot)
