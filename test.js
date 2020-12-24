@@ -52,6 +52,10 @@ describe('<message>', () => {
       const parsed = parser('chore: contains multiple commits\nfix(parser): address bug with parser')
       parsed.should.matchSnapshot()
     })
+    it('parses commit summary footer, with breaking change marker', () => {
+      const parsed = parser('chore: contains multiple commits\nfeat(parser)!: address bug with parser')
+      parsed.should.matchSnapshot()
+    })
     it('parses BREAKING CHANGE literal as <token>', () => {
       const parsed = parser('fix: address major bug\nBREAKING CHANGE: this change is breaking')
       parsed.should.matchSnapshot()
@@ -80,7 +84,7 @@ describe('<message>', () => {
       const parsed = parser('fix: address major bug\n\nthis is the first line of the body\n\nthis is the second line of body\n\nAuthor: @bcoe\nRefs #392')
       parsed.should.matchSnapshot()
     })
-    it('parses footer after multi-line body', () => {
+    it('properly ', () => {
       const parsed = parser('fix: address major bug\n\nthis is the first line of the body\n\nthis is the second line of body\n\nAuthor: @bcoe\nRefs #392')
       parsed.should.matchSnapshot()
     })

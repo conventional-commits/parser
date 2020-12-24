@@ -243,7 +243,7 @@ function footer (scanner) {
 
 /*
  * <token>        ::= <breaking-change>
- *                 |  <type> "(" <scope> ")"
+ *                 |  <type>, "(" <scope> ")", ["!"]
  *                 |  <type>
  */
 function token (scanner) {
@@ -280,6 +280,11 @@ function token (scanner) {
       }
       if (scanner.peek() !== ')') return invalidToken(scanner, [')'])
       scanner.next()
+    }
+    // ["!"]
+    const b = breakingChange(scanner)
+    if (!(b instanceof Error)) {
+      node.children.push(b)
     }
   }
   node.position = { start, end: scanner.position() }
