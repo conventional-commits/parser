@@ -193,6 +193,7 @@ function body (scanner) {
           Array.prototype.push.apply(node.children, b.children)
         }
       }
+      break // The recursive body(scanner) step should consume all tokens.
     } else {
       node.children.push(f)
     }
