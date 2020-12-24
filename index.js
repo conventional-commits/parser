@@ -2,7 +2,7 @@ const Scanner = require('./lib/scanner')
 const { isWhitespace, isNewline, isParens } = require('./lib/type-checks')
 
 /*
- * <message>       ::= <summary>, <newline>?, <body>
+ * <message>       ::= <summary>, <newline>*, <body>
  *                  |  <summary>
  */
 function message (commitText) {
