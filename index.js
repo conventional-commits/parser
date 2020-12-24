@@ -2,8 +2,8 @@ const Scanner = require('./lib/scanner')
 const { isWhitespace, isNewline, isParens } = require('./lib/type-checks')
 
 /*
- * <message>      ::= <summary> <newline> <body-footer>
- *                 |  <summary>
+ * <message>       ::= <summary>, <newline>*, <body>
+ *                  |  <summary>
  */
 function message (commitText) {
   const scanner = new Scanner(commitText.trim())
@@ -24,13 +24,15 @@ function message (commitText) {
     return node
   }
 
-  // <summary> <newline> <body-footer>
+  // <summary> <newline>* <body>
   if (isNewline(scanner.peek())) {
-    scanner.next()
+    while (isNewline(scanner.peek())) {
+      scanner.next()
+    }
   } else {
     throw invalidToken(scanner, ['none'])
   }
-  node.children.push(bodyFooter(scanner))
+  node.children.push(body(scanner))
   node.position = { start, end: scanner.position() }
   return node
 }
@@ -161,13 +163,13 @@ function scope (scanner) {
 }
 
 /*
- * <body-footer>  ::= 1*<footer>
- *                ::= <body> <newline> 1*<body-footer>
- *                ::= <body>
+ * <body>          ::= <footer>+
+ *                  | [<text>], <newline>, <body>*
+ *                  | [<text>]
  */
-function bodyFooter (scanner) {
+function body (scanner) {
   const node = {
-    type: 'body-footer',
+    type: 'body',
     children: []
   }
   const start = scanner.position()
@@ -175,9 +177,23 @@ function bodyFooter (scanner) {
   while (!scanner.eof()) {
     const f = footer(scanner)
     if (f instanceof Error) {
-      node.children = []
       scanner.rewind(start)
-      break
+      node.children = []
+      // [<text>], <newline>, <body>*
+      const t = text(scanner)
+      // [<text>]
+      node.children.push(t)
+      // <newline>, <body>*
+      if (isNewline(scanner.peek())) {
+        scanner.next()
+        const b = body(scanner)
+        if (b instanceof Error) {
+          return b
+        } else {
+          Array.prototype.push.apply(node.children, b.children)
+        }
+      }
+      break // The recursive body(scanner) step should consume all tokens.
     } else {
       node.children.push(f)
     }
@@ -228,7 +244,7 @@ function footer (scanner) {
 
 /*
  * <token>        ::= <breaking-change>
- *                 |  <type> "(" <scope> ")"
+ *                 |  <type>, "(" <scope> ")", ["!"]
  *                 |  <type>
  */
 function token (scanner) {
@@ -265,6 +281,11 @@ function token (scanner) {
       }
       if (scanner.peek() !== ')') return invalidToken(scanner, [')'])
       scanner.next()
+    }
+    // ["!"]
+    const b = breakingChange(scanner)
+    if (!(b instanceof Error)) {
+      node.children.push(b)
     }
   }
   node.position = { start, end: scanner.position() }
