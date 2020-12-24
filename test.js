@@ -29,18 +29,18 @@ describe('<message>', () => {
     it('throws error when ":" token is missing', () => {
       expect(() => {
         parser('feat add support for scopes')
-      }).to.throw("unexpected token ' ' at position 1:5 valid tokens [(, !, :]")
+      }).to.throw("unexpected token ' ' at 1:5, valid tokens [(, !, :]")
       expect(() => {
         parser('feat( foo ) add support for scopes')
-      }).to.throw("unexpected token ' ' at position 1:12 valid tokens [!, :]")
+      }).to.throw("unexpected token ' ' at 1:12, valid tokens [!, :]")
       expect(() => {
         parser('feat(bar)! add support for breaking change')
-      }).to.throw("unexpected token ' ' at position 1:11 valid tokens [:]")
+      }).to.throw("unexpected token ' ' at 1:11, valid tokens [:]")
     })
     it('throws error when closing ")" token is missing', () => {
       expect(() => {
         parser('feat(foo: add support for scopes')
-      }).to.throw('unexpected token EOF valid tokens [)]')
+      }).to.throw('unexpected token EOF at 1:33, valid tokens [)]')
     })
   })
   describe('<footer>', () => {

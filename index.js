@@ -7,11 +7,8 @@ const { isWhitespace, isNewline, isParens } = require('./lib/type-checks')
  */
 function message (commitText) {
   const scanner = new Scanner(commitText.trim())
-  const start = scanner.position()
-  const node = {
-    type: 'message',
-    children: []
-  }
+  const node = scanner.enter('message', [])
+
   // <summary>
   const s = summary(scanner)
   if (s instanceof Error) {
@@ -20,8 +17,7 @@ function message (commitText) {
     node.children.push(s)
   }
   if (scanner.eof()) {
-    node.position = { start, end: scanner.position() }
-    return node
+    return scanner.exit(node)
   }
 
   // <summary> <newline>* <body>
@@ -30,11 +26,10 @@ function message (commitText) {
       scanner.next()
     }
   } else {
-    throw invalidToken(scanner, ['none'])
+    throw scanner.abort(node)
   }
   node.children.push(body(scanner))
-  node.position = { start, end: scanner.position() }
-  return node
+  return scanner.exit(node)
 }
 
 /*
@@ -43,11 +38,7 @@ function message (commitText) {
  *
  */
 function summary (scanner) {
-  const start = scanner.position()
-  const node = {
-    type: 'summary',
-    children: []
-  }
+  const node = scanner.enter('summary', [])
 
   const t = type(scanner)
   if (t instanceof Error) {
@@ -67,7 +58,7 @@ function summary (scanner) {
       node.children.push(s)
     }
     if (scanner.peek() !== ')') {
-      return invalidToken(scanner, [')'])
+      return scanner.abort(node, [')'])
     }
     scanner.next()
   }
@@ -83,25 +74,20 @@ function summary (scanner) {
   // ... ": " <text>
   const sep = separator(scanner)
   if (sep instanceof Error) {
-    return invalidToken(scanner, [!s && '(', !b && '!', ':'])
+    return scanner.abort(node, [!s && '(', !b && '!', ':'])
   } else {
     node.children.push(sep)
   }
 
   node.children.push(text(scanner))
-  node.position = { start, end: scanner.position() }
-  return node
+  return scanner.exit(node)
 }
 
 /*
  * <type>         ::= 1*<any UTF8-octets except newline or parens or ["!"] ":" or whitespace>
  */
 function type (scanner) {
-  const start = scanner.position()
-  const node = {
-    type: 'type',
-    value: ''
-  }
+  const node = scanner.enter('type', '')
   while (!scanner.eof()) {
     const token = scanner.peek()
     if (isParens(token) || isWhitespace(token) || isNewline(token) || token === '!' || token === ':') {
@@ -110,10 +96,9 @@ function type (scanner) {
     node.value += scanner.next()
   }
   if (node.value === '') {
-    return invalidToken(scanner, ['type'])
+    return scanner.abort(node)
   } else {
-    node.position = { start, end: scanner.position() }
-    return node
+    return scanner.exit(node)
   }
 }
 
@@ -121,11 +106,7 @@ function type (scanner) {
  * <text>         ::= 1*<any UTF8-octets except newline>
  */
 function text (scanner) {
-  const start = scanner.position()
-  const node = {
-    type: 'text',
-    value: ''
-  }
+  const node = scanner.enter('text', '')
   while (!scanner.eof()) {
     const token = scanner.peek()
     if (isNewline(token)) {
@@ -133,19 +114,14 @@ function text (scanner) {
     }
     node.value += scanner.next()
   }
-  node.position = { start, end: scanner.position() }
-  return node
+  return scanner.exit(node)
 }
 
 /*
  * <scope>        ::= 1*<any UTF8-octets except newline or parens>
  */
 function scope (scanner) {
-  const start = scanner.position()
-  const node = {
-    type: 'scope',
-    value: ''
-  }
+  const node = scanner.enter('scope', '')
   while (!scanner.eof()) {
     const token = scanner.peek()
     if (isParens(token) || isNewline(token)) {
@@ -155,10 +131,9 @@ function scope (scanner) {
   }
 
   if (node.value === '') {
-    return invalidToken(scanner, ['scope'])
+    return scanner.abort(node)
   } else {
-    node.position = { start, end: scanner.position() }
-    return node
+    return scanner.exit(node)
   }
 }
 
@@ -168,16 +143,12 @@ function scope (scanner) {
  *                  | [<text>]
  */
 function body (scanner) {
-  const node = {
-    type: 'body',
-    children: []
-  }
-  const start = scanner.position()
+  const node = scanner.enter('body', [])
   // 1*<footer>
   while (!scanner.eof()) {
     const f = footer(scanner)
     if (f instanceof Error) {
-      scanner.rewind(start)
+      scanner.abort(node)
       node.children = []
       // [<text>], <newline>, <body>*
       const t = text(scanner)
@@ -198,19 +169,14 @@ function body (scanner) {
       node.children.push(f)
     }
   }
-  node.position = { start, end: scanner.position() }
-  return node
+  return scanner.exit(node)
 }
 
 /*
  * <footer>       ::= <token> <separator> *<whitespace> <value> <newline>?
 */
 function footer (scanner) {
-  const start = scanner.position()
-  const node = {
-    type: 'footer',
-    children: []
-  }
+  const node = scanner.enter('footer', [])
   // <token>
   const t = token(scanner)
   if (t instanceof Error) {
@@ -238,8 +204,7 @@ function footer (scanner) {
   if (isNewline(scanner.peek())) {
     scanner.next()
   }
-  node.position = { start, end: scanner.position() }
-  return node
+  return scanner.exit(node)
 }
 
 /*
@@ -248,20 +213,14 @@ function footer (scanner) {
  *                 |  <type>
  */
 function token (scanner) {
-  const node = {
-    type: 'token',
-    children: []
-  }
-
+  const node = scanner.enter('token', [])
   // "BREAKING CHANGE"
-  const start = scanner.position()
   const b = breakingChange(scanner)
   if (b instanceof Error) {
-    scanner.rewind(start)
+    scanner.abort(node)
   } else {
     node.children.push(b)
-    node.position = { start, end: scanner.position() }
-    return node
+    return scanner.exit(node)
   }
 
   // <type>
@@ -279,7 +238,9 @@ function token (scanner) {
       } else {
         node.children.push(s)
       }
-      if (scanner.peek() !== ')') return invalidToken(scanner, [')'])
+      if (scanner.peek() !== ')') {
+        return scanner.abort(node, [')'])
+      }
       scanner.next()
     }
     // ["!"]
@@ -288,29 +249,23 @@ function token (scanner) {
       node.children.push(b)
     }
   }
-  node.position = { start, end: scanner.position() }
-  return node
+  return scanner.exit(node)
 }
 
 /*
  * <breaking-change> ::= "!" | "BREAKING CHANGE"
  */
 function breakingChange (scanner) {
-  const start = scanner.position()
-  const node = {
-    type: 'breaking-change',
-    value: ''
-  }
+  const node = scanner.enter('breaking-change', '')
   if (scanner.peek() === '!') {
     node.value = scanner.next()
   } else if (scanner.peekLiteral('BREAKING CHANGE')) {
     node.value = scanner.next('BREAKING CHANGE'.length)
   }
   if (node.value === '') {
-    return invalidToken(scanner, ['BREAKING CHANGE'])
+    return scanner.abort(node, ['BREAKING CHANGE'])
   } else {
-    node.position = { start, end: scanner.position() }
-    return node
+    return scanner.exit(node)
   }
 }
 
@@ -319,66 +274,49 @@ function breakingChange (scanner) {
  *                 |  <text>
  */
 function value (scanner) {
-  const start = scanner.position()
-  const node = {
-    type: 'value',
-    children: []
-  }
+  const node = scanner.enter('value', [])
   node.children.push(text(scanner))
   let c
   // 1*<continuation>
   while (!((c = continuation(scanner)) instanceof Error)) {
     node.children.push(c)
   }
-  node.position = { start, end: scanner.position() }
-  return node
+  return scanner.exit(node)
 }
 
 /*
  * <newline> <whitespace> <text>
  */
 function continuation (scanner) {
-  const node = {
-    type: 'continuation',
-    children: []
-  }
-  const start = scanner.position()
+  const node = scanner.enter('continuation', [])
   if (isNewline(scanner.peek())) {
     scanner.next()
     if (isWhitespace(scanner.peek())) {
       scanner.next()
       node.children.push(text(scanner))
     } else {
-      scanner.rewind(start)
-      return invalidToken(scanner, ['continuation'])
+      return scanner.abort(node)
     }
   } else {
-    return invalidToken(scanner, ['continuation'])
+    return scanner.abort(node)
   }
-  node.position = { start, end: scanner.position() }
-  return node
+  return scanner.exit(node)
 }
 
 /*
  * <separator>    ::= ": " | " #"
  */
 function separator (scanner) {
-  const start = scanner.position()
-  const node = {
-    type: 'separator',
-    value: ''
-  }
-
+  const node = scanner.enter('separator', '')
   // ': '
   if (scanner.peek() === ':') {
     scanner.next()
     if (scanner.peek() === ' ') {
       node.value = ': '
       scanner.next()
-      node.position = { start, end: scanner.position() }
-      return node
+      return scanner.exit(node)
     } else {
-      return invalidToken(scanner, ['separator'])
+      return scanner.abort(node)
     }
   }
 
@@ -388,25 +326,13 @@ function separator (scanner) {
     if (scanner.peek() === '#') {
       scanner.next()
       node.value = ' #'
-      node.position = { start, end: scanner.position() }
+      return scanner.exit(node)
     } else {
-      scanner.rewind(start)
-      return invalidToken(scanner, ['separator'])
+      return scanner.abort(node)
     }
-  } else {
-    return invalidToken(scanner, ['separator'])
   }
-  return node
-}
 
-function invalidToken (scanner, expected) {
-  const validTokens = expected.filter(Boolean).join(', ')
-  if (scanner.eof()) {
-    return Error(`unexpected token EOF valid tokens [${validTokens}]`)
-  } else {
-    const pos = scanner.position()
-    return Error(`unexpected token '${scanner.peek()}' at position ${pos.line}:${pos.column} valid tokens [${validTokens}]`)
-  }
+  return scanner.abort(node)
 }
 
 module.exports = message
