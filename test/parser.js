@@ -1,6 +1,8 @@
 const { describe, beforeEach, it } = require('mocha')
-const { expect } = require('chai')
+const { expect, assert } = require('chai')
 const chaiJestSnapshot = require('chai-jest-snapshot')
+const source = require('unist-util-source')
+const visit = require('unist-util-visit')
 const { parser } = require('../')
 
 require('chai')
@@ -42,6 +44,9 @@ describe('<message>', () => {
         parser('feat(foo: add support for scopes')
       }).to.throw('unexpected token EOF at 1:33, valid tokens [)]')
     })
+    it('contains valid positions for summary with scope', () => {
+      assertNodePositions('feat(parser): add support for scopes')
+    })
   })
   describe('<footer>', () => {
     it('parses simple token/separator/value form of footer', () => {
@@ -64,6 +69,9 @@ describe('<message>', () => {
       const parsed = parser('fix: address major bug\nBREAKING CHANGE: first line of breaking change\n second line of breaking change\n third line of breaking change')
       parsed.should.matchSnapshot()
     })
+    it('contains valid positions for multiline BREAKING CHANGES, via continuation', () => {
+      assertNodePositions('fix: address major bug\nBREAKING CHANGE: first line of breaking change\n second line of breaking change\n third line of breaking change')
+    })
   })
   describe('<summary>, <newline>*, <body>', () => {
     it('treats multiple newline between body and summary as optional', () => {
@@ -73,6 +81,9 @@ describe('<message>', () => {
     it('allows for multiple newlines between summary and body', () => {
       const parsed = parser('fix: address major bug\n\nthis is a free form body of text')
       parsed.should.matchSnapshot()
+    })
+    it('contains valid positions for multiple newlines between summary and body', () => {
+      assertNodePositions('fix: address major bug\n\nthis is a free form body of text')
     })
   })
   describe('[<text>], <newline>, <footer>*', () => {
@@ -84,5 +95,18 @@ describe('<message>', () => {
       const parsed = parser('fix: address major bug\n\nthis is the first line of the body\n\nthis is the second line of body\n\nAuthor: @bcoe\nRefs #392')
       parsed.should.matchSnapshot()
     })
+    it('contains valid positions for footer after multi-line body', () => {
+      assertNodePositions('fix: address major bug\n\nthis is the first line of the body\n\nthis is the second line of body\n\nAuthor: @bcoe\nRefs #392')
+    })
   })
 })
+
+function assertNodePositions (text) {
+  visit(parser(text), node => {
+    if (node.children) return
+    const valueByPoint = source(node, text)
+    const valueByOffset = text.substring(node.position.start.offset, node.position.end.offset)
+    assert.strictEqual(valueByPoint, node.value, `line:column value doesn't match "${node.type}", received "${valueByPoint}"`)
+    assert.strictEqual(valueByOffset, node.value, `offset value doesn't match "${node.type}", received "${valueByOffset}"`)
+  })
+}

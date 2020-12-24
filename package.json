@@ -37,6 +37,8 @@
     "mocha": "^8.2.1",
     "standard": "^16.0.3",
     "unist-util-inspect": "^6.0.1",
+    "unist-util-source": "^3.0.0",
+    "unist-util-visit": "^2.0.3",
     "yargs": "^16.2.0"
   },
   "dependencies": {
