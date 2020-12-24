@@ -26,7 +26,7 @@ function message (commitText) {
       scanner.next()
     }
   } else {
-    throw scanner.abort(node, ['none'])
+    throw scanner.abort(node)
   }
   node.children.push(body(scanner))
   return scanner.exit(node)
@@ -96,7 +96,7 @@ function type (scanner) {
     node.value += scanner.next()
   }
   if (node.value === '') {
-    return scanner.abort(node, ['type'])
+    return scanner.abort(node)
   } else {
     return scanner.exit(node)
   }
@@ -131,7 +131,7 @@ function scope (scanner) {
   }
 
   if (node.value === '') {
-    return scanner.abort(node, ['scope'])
+    return scanner.abort(node)
   } else {
     return scanner.exit(node)
   }
@@ -295,10 +295,10 @@ function continuation (scanner) {
       scanner.next()
       node.children.push(text(scanner))
     } else {
-      return scanner.abort(node, ['continuation'])
+      return scanner.abort(node)
     }
   } else {
-    return scanner.abort(node, ['continuation'])
+    return scanner.abort(node)
   }
   return scanner.exit(node)
 }
@@ -316,7 +316,7 @@ function separator (scanner) {
       scanner.next()
       return scanner.exit(node)
     } else {
-      return scanner.abort(node, ['separator'])
+      return scanner.abort(node)
     }
   }
 
@@ -328,11 +328,11 @@ function separator (scanner) {
       node.value = ' #'
       return scanner.exit(node)
     } else {
-      return scanner.abort(node, ['separator'])
+      return scanner.abort(node)
     }
   }
 
-  return scanner.abort(node, ['separator'])
+  return scanner.abort(node)
 }
 
 module.exports = message
