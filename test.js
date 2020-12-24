@@ -61,4 +61,28 @@ describe('<message>', () => {
       parsed.should.matchSnapshot()
     })
   })
+  describe('<summary>, <newline>*, <body>', () => {
+    it('treats multiple newline between body and summary as optional', () => {
+      const parsed = parser('fix: address major bug\nthis is a free form body of text')
+      parsed.should.matchSnapshot()
+    })
+    it('allows for multiple newlines between summary and body', () => {
+      const parsed = parser('fix: address major bug\n\nthis is a free form body of text')
+      parsed.should.matchSnapshot()
+    })
+  })
+  describe('[<text>], <newline>, <footer>*', () => {
+    it('parses footer after body', () => {
+      const parsed = parser('fix: address major bug\n\nthis is a free form body of text\nAuthor: @bcoe\nRefs #392')
+      parsed.should.matchSnapshot()
+    })
+    it('parses footer after multi-line body', () => {
+      const parsed = parser('fix: address major bug\n\nthis is the first line of the body\n\nthis is the second line of body\n\nAuthor: @bcoe\nRefs #392')
+      parsed.should.matchSnapshot()
+    })
+    it('parses footer after multi-line body', () => {
+      const parsed = parser('fix: address major bug\n\nthis is the first line of the body\n\nthis is the second line of body\n\nAuthor: @bcoe\nRefs #392')
+      parsed.should.matchSnapshot()
+    })
+  })
 })

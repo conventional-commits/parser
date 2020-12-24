@@ -37,7 +37,7 @@ to keep this in sync with the written specification on conventionalcommits.org.
 /* Any non-newline whitespace: */
 <whitespace>    ::= <ZWNBSP> | <TAB> | <VT> | <FF> | <SP> | <NBSP> | <USP>
 
-<message>       ::= <summary>, <newline>, <bodyfooter>
+<message>       ::= <summary>, <newline>*, <body>
                  |  <summary>
 
 <summary>       ::= <type>, "(", <scope>, ")", ["!"], ":", <whitespace>*, <text>
@@ -50,10 +50,9 @@ to keep this in sync with the written specification on conventionalcommits.org.
  * Note: if the first <body> node starts with "BREAKING CHANGE:" this should
  * be treated by parsers as a breaking change marker upstream:
  */
-<body-footer>   ::= <footer>+
-                 | <body>, <newline>, <body-footer>*
-                 | <body>
-<body>          ::= [<text>]
+<body>          ::= <footer>+
+                 | [<text>], <newline>, <body>*
+                 | [<text>]
 
 <footer>        ::= <token>, <separator>, <whitespace>*, <value>, [<newline>]
 <token>         ::= "BREAKING CHANGE"
