@@ -84,9 +84,5 @@ describe('<message>', () => {
       const parsed = parser('fix: address major bug\n\nthis is the first line of the body\n\nthis is the second line of body\n\nAuthor: @bcoe\nRefs #392')
       parsed.should.matchSnapshot()
     })
-    it('properly ', () => {
-      const parsed = parser('fix: address major bug\n\nthis is the first line of the body\n\nthis is the second line of body\n\nAuthor: @bcoe\nRefs #392')
-      parsed.should.matchSnapshot()
-    })
   })
 })
