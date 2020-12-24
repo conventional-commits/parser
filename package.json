@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "reference implementation of conventionalcommits.org spec",
   "main": "index.js",
+  "files": [
+    "lib",
+    "index.js"
+  ],
   "scripts": {
     "test": "c8 mocha test.js",
     "test:snap": "CHAI_JEST_SNAPSHOT_UPDATE_ALL=true npm test",
