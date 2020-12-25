@@ -24,9 +24,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 6,
+              "column": 5,
               "line": 1,
-              "offset": 5,
+              "offset": 4,
             },
             "start": Object {
               "column": 4,
@@ -35,7 +35,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -108,9 +124,9 @@ Object {
             Object {
               "position": Object {
                 "end": Object {
-                  "column": 18,
+                  "column": 17,
                   "line": 2,
-                  "offset": 40,
+                  "offset": 39,
                 },
                 "start": Object {
                   "column": 16,
@@ -119,7 +135,23 @@ Object {
                 },
               },
               "type": "separator",
-              "value": ": ",
+              "value": ":",
+            },
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 18,
+                  "line": 2,
+                  "offset": 40,
+                },
+                "start": Object {
+                  "column": 17,
+                  "line": 2,
+                  "offset": 39,
+                },
+              },
+              "type": "whitespace",
+              "value": " ",
             },
             Object {
               "children": Array [
@@ -225,9 +257,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 8,
+              "column": 7,
               "line": 1,
-              "offset": 7,
+              "offset": 6,
             },
             "start": Object {
               "column": 6,
@@ -236,7 +268,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 8,
+              "line": 1,
+              "offset": 7,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 1,
+              "offset": 6,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -325,9 +373,9 @@ Object {
             Object {
               "position": Object {
                 "end": Object {
-                  "column": 14,
+                  "column": 13,
                   "line": 2,
-                  "offset": 46,
+                  "offset": 45,
                 },
                 "start": Object {
                   "column": 12,
@@ -336,7 +384,23 @@ Object {
                 },
               },
               "type": "separator",
-              "value": ": ",
+              "value": ":",
+            },
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 14,
+                  "line": 2,
+                  "offset": 46,
+                },
+                "start": Object {
+                  "column": 13,
+                  "line": 2,
+                  "offset": 45,
+                },
+              },
+              "type": "whitespace",
+              "value": " ",
             },
             Object {
               "children": Array [
@@ -442,9 +506,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 8,
+              "column": 7,
               "line": 1,
-              "offset": 7,
+              "offset": 6,
             },
             "start": Object {
               "column": 6,
@@ -453,7 +517,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 8,
+              "line": 1,
+              "offset": 7,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 1,
+              "offset": 6,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -558,9 +638,9 @@ Object {
             Object {
               "position": Object {
                 "end": Object {
-                  "column": 16,
+                  "column": 15,
                   "line": 2,
-                  "offset": 48,
+                  "offset": 47,
                 },
                 "start": Object {
                   "column": 14,
@@ -569,7 +649,23 @@ Object {
                 },
               },
               "type": "separator",
-              "value": ": ",
+              "value": ":",
+            },
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 16,
+                  "line": 2,
+                  "offset": 48,
+                },
+                "start": Object {
+                  "column": 15,
+                  "line": 2,
+                  "offset": 47,
+                },
+              },
+              "type": "whitespace",
+              "value": " ",
             },
             Object {
               "children": Array [
@@ -675,9 +771,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 6,
+              "column": 5,
               "line": 1,
-              "offset": 5,
+              "offset": 4,
             },
             "start": Object {
               "column": 4,
@@ -686,7 +782,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -759,9 +871,9 @@ Object {
             Object {
               "position": Object {
                 "end": Object {
-                  "column": 9,
+                  "column": 8,
                   "line": 2,
-                  "offset": 31,
+                  "offset": 30,
                 },
                 "start": Object {
                   "column": 7,
@@ -770,7 +882,23 @@ Object {
                 },
               },
               "type": "separator",
-              "value": ": ",
+              "value": ":",
+            },
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 9,
+                  "line": 2,
+                  "offset": 31,
+                },
+                "start": Object {
+                  "column": 8,
+                  "line": 2,
+                  "offset": 30,
+                },
+              },
+              "type": "whitespace",
+              "value": " ",
             },
             Object {
               "children": Array [
@@ -876,9 +1004,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 6,
+              "column": 5,
               "line": 1,
-              "offset": 5,
+              "offset": 4,
             },
             "start": Object {
               "column": 4,
@@ -887,7 +1015,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -960,9 +1104,9 @@ Object {
             Object {
               "position": Object {
                 "end": Object {
-                  "column": 18,
+                  "column": 17,
                   "line": 2,
-                  "offset": 40,
+                  "offset": 39,
                 },
                 "start": Object {
                   "column": 16,
@@ -971,7 +1115,23 @@ Object {
                 },
               },
               "type": "separator",
-              "value": ": ",
+              "value": ":",
+            },
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 18,
+                  "line": 2,
+                  "offset": 40,
+                },
+                "start": Object {
+                  "column": 17,
+                  "line": 2,
+                  "offset": 39,
+                },
+              },
+              "type": "whitespace",
+              "value": " ",
             },
             Object {
               "children": Array [
@@ -993,6 +1153,22 @@ Object {
                 },
                 Object {
                   "children": Array [
+                    Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 2,
+                          "line": 3,
+                          "offset": 71,
+                        },
+                        "start": Object {
+                          "column": 1,
+                          "line": 3,
+                          "offset": 70,
+                        },
+                      },
+                      "type": "whitespace",
+                      "value": " ",
+                    },
                     Object {
                       "position": Object {
                         "end": Object {
@@ -1026,6 +1202,22 @@ Object {
                 },
                 Object {
                   "children": Array [
+                    Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 2,
+                          "line": 4,
+                          "offset": 103,
+                        },
+                        "start": Object {
+                          "column": 1,
+                          "line": 4,
+                          "offset": 102,
+                        },
+                      },
+                      "type": "whitespace",
+                      "value": " ",
+                    },
                     Object {
                       "position": Object {
                         "end": Object {
@@ -1159,9 +1351,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 8,
+              "column": 7,
               "line": 1,
-              "offset": 7,
+              "offset": 6,
             },
             "start": Object {
               "column": 6,
@@ -1170,7 +1362,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 8,
+              "line": 1,
+              "offset": 7,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 1,
+              "offset": 6,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -1276,9 +1484,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 21,
+              "column": 20,
               "line": 1,
-              "offset": 20,
+              "offset": 19,
             },
             "start": Object {
               "column": 19,
@@ -1287,7 +1495,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 21,
+              "line": 1,
+              "offset": 20,
+            },
+            "start": Object {
+              "column": 20,
+              "line": 1,
+              "offset": 19,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -1361,9 +1585,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 6,
+              "column": 5,
               "line": 1,
-              "offset": 5,
+              "offset": 4,
             },
             "start": Object {
               "column": 4,
@@ -1372,7 +1596,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -1462,9 +1702,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 15,
+              "column": 14,
               "line": 1,
-              "offset": 14,
+              "offset": 13,
             },
             "start": Object {
               "column": 13,
@@ -1473,7 +1713,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 15,
+              "line": 1,
+              "offset": 14,
+            },
+            "start": Object {
+              "column": 14,
+              "line": 1,
+              "offset": 13,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -1547,9 +1803,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 6,
+              "column": 5,
               "line": 1,
-              "offset": 5,
+              "offset": 4,
             },
             "start": Object {
               "column": 4,
@@ -1558,7 +1814,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -1665,9 +1937,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 6,
+              "column": 5,
               "line": 1,
-              "offset": 5,
+              "offset": 4,
             },
             "start": Object {
               "column": 4,
@@ -1676,7 +1948,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -1783,9 +2071,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 6,
+              "column": 5,
               "line": 1,
-              "offset": 5,
+              "offset": 4,
             },
             "start": Object {
               "column": 4,
@@ -1794,7 +2082,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -1883,9 +2187,9 @@ Object {
             Object {
               "position": Object {
                 "end": Object {
-                  "column": 9,
+                  "column": 8,
                   "line": 4,
-                  "offset": 65,
+                  "offset": 64,
                 },
                 "start": Object {
                   "column": 7,
@@ -1894,7 +2198,23 @@ Object {
                 },
               },
               "type": "separator",
-              "value": ": ",
+              "value": ":",
+            },
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 9,
+                  "line": 4,
+                  "offset": 65,
+                },
+                "start": Object {
+                  "column": 8,
+                  "line": 4,
+                  "offset": 64,
+                },
+              },
+              "type": "whitespace",
+              "value": " ",
             },
             Object {
               "children": Array [
@@ -1917,9 +2237,9 @@ Object {
               ],
               "position": Object {
                 "end": Object {
-                  "column": 14,
-                  "line": 4,
-                  "offset": 70,
+                  "column": 1,
+                  "line": 5,
+                  "offset": 71,
                 },
                 "start": Object {
                   "column": 9,
@@ -2099,9 +2419,9 @@ Object {
         Object {
           "position": Object {
             "end": Object {
-              "column": 6,
+              "column": 5,
               "line": 1,
-              "offset": 5,
+              "offset": 4,
             },
             "start": Object {
               "column": 4,
@@ -2110,7 +2430,23 @@ Object {
             },
           },
           "type": "separator",
-          "value": ": ",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
         },
         Object {
           "position": Object {
@@ -2247,9 +2583,9 @@ Object {
             Object {
               "position": Object {
                 "end": Object {
-                  "column": 9,
+                  "column": 8,
                   "line": 7,
-                  "offset": 101,
+                  "offset": 100,
                 },
                 "start": Object {
                   "column": 7,
@@ -2258,7 +2594,23 @@ Object {
                 },
               },
               "type": "separator",
-              "value": ": ",
+              "value": ":",
+            },
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 9,
+                  "line": 7,
+                  "offset": 101,
+                },
+                "start": Object {
+                  "column": 8,
+                  "line": 7,
+                  "offset": 100,
+                },
+              },
+              "type": "whitespace",
+              "value": " ",
             },
             Object {
               "children": Array [
@@ -2281,9 +2633,9 @@ Object {
               ],
               "position": Object {
                 "end": Object {
-                  "column": 14,
-                  "line": 7,
-                  "offset": 106,
+                  "column": 1,
+                  "line": 8,
+                  "offset": 107,
                 },
                 "start": Object {
                   "column": 9,
