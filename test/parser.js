@@ -26,6 +26,14 @@ describe('<message>', () => {
       parsed = parser('feat(http parser)!: add support for scopes')
       parsed.should.matchSnapshot()
     })
+    it('parses summary with multiple spaces after separator', () => {
+      const parsed = parser('feat(tree):    add whitespace node')
+      parsed.should.matchSnapshot()
+    })
+    it('parses summary without spaces after separator', () => {
+      const parsed = parser('feat(tree):no whitespaces here')
+      parsed.should.matchSnapshot()
+    })
     it('throws error when ":" token is missing', () => {
       expect(() => {
         parser('feat add support for scopes')
@@ -62,6 +70,14 @@ describe('<message>', () => {
     })
     it('supports multiline BREAKING CHANGES, via continuation', () => {
       const parsed = parser('fix: address major bug\nBREAKING CHANGE: first line of breaking change\n second line of breaking change\n third line of breaking change')
+      parsed.should.matchSnapshot()
+    })
+    it('parses footer tokens with multiple whitespaces after separator', () => {
+      const parsed = parser('fix: some stuff\n\nExternal-Id:    1337')
+      parsed.should.matchSnapshot()
+    })
+    it('parses footer tokens without whitespaces after separator', () => {
+      const parsed = parser('fix: some stuff\n\nExternal-Id:1337')
       parsed.should.matchSnapshot()
     })
   })

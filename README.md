@@ -84,5 +84,5 @@ in sync with the written specification on conventionalcommits.org.
 <separator>     ::= ":" | " #"
 <value>         ::= <text>, <continuation>+
                  | <text>
-<continuation> ::= <newline>, <whitespace>, <text>
+<continuation> ::= <newline>, <whitespace>+, <text>
 ```
