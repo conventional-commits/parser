@@ -68,7 +68,7 @@ in sync with the written specification on conventionalcommits.org.
                  |  <type>, ["!"], ":", <whitespace>*, <text>
 <type>          ::= <any UTF8-octets except newline or parens or ":" or "!:" or whitespace>+
 <scope>         ::= <any UTF8-octets except newline or parens>+
-<text>          ::= <any UTF8-octets except newline>+
+<text>          ::= <any UTF8-octets except newline>*
 
 /*
  * Note: if the first <body> node starts with "BREAKING CHANGE:" this should
