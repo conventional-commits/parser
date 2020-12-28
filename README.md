@@ -60,7 +60,7 @@ in sync with the written specification on conventionalcommits.org.
 /* Any non-newline whitespace: */
 <whitespace>    ::= <ZWNBSP> | <TAB> | <VT> | <FF> | <SP> | <NBSP> | <USP>
 
-<message>       ::= <summary>, <newline>*, <body>, <newline>*, <footer>+
+<message>       ::= <summary>, <newline>+, <body>, <newline>*, <footer>+
                  |  <summary>, <newline>*, <footer>+
                  |  <summary>, <newline>*
 
