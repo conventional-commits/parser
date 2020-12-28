@@ -91,7 +91,7 @@ describe('<message>', () => {
       parsed.should.matchSnapshot()
     })
   })
-  describe('[<text>], <newline>, <footer>*', () => {
+  describe('<body>, <newline>*, <footer>+', () => {
     it('parses footer after body', () => {
       const parsed = parser('fix: address major bug\n\nthis is a free form body of text\nAuthor: @bcoe\nRefs #392')
       parsed.should.matchSnapshot()

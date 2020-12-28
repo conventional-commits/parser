@@ -60,22 +60,24 @@ in sync with the written specification on conventionalcommits.org.
 /* Any non-newline whitespace: */
 <whitespace>    ::= <ZWNBSP> | <TAB> | <VT> | <FF> | <SP> | <NBSP> | <USP>
 
-<message>       ::= <summary>, <newline>*, <body>
-                 |  <summary>
+<message>       ::= <summary>, <newline>+, <body>, <newline>*, <footer>+
+                 |  <summary>, <newline>*, <footer>+
+                 |  <summary>, <newline>*
 
 <summary>       ::= <type>, "(", <scope>, ")", ["!"], ":", <whitespace>*, <text>
                  |  <type>, ["!"], ":", <whitespace>*, <text>
 <type>          ::= <any UTF8-octets except newline or parens or ":" or "!:" or whitespace>+
 <scope>         ::= <any UTF8-octets except newline or parens>+
-<text>          ::= <any UTF8-octets except newline>+
+<text>          ::= <any UTF8-octets except newline>*
 
 /*
  * Note: if the first <body> node starts with "BREAKING CHANGE:" this should
  * be treated by parsers as a breaking change marker upstream:
  */
-<body>          ::= <footer>+
-                 | [<text>], <newline>, <body>*
-                 | [<text>]
+<body>          ::= [<any text except pre-footer>], <newline>, <body>*
+                 | [<any text except pre-footer>]
+/* Note: <pre-footer> is used during parsing, but never returned in the AST. */
+<pre-footer>    ::= <newline>*, <footer>+
 
 <footer>        ::= <token>, <separator>, <whitespace>*, <value>, [<newline>]
 <token>         ::= "BREAKING CHANGE"

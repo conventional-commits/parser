@@ -1,5 +1,733 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<message> <body>, <newline>*, <footer>+ parses footer after body 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 4,
+              "line": 1,
+              "offset": 3,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 1,
+              "offset": 0,
+            },
+          },
+          "type": "type",
+          "value": "fix",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 1,
+              "offset": 3,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 23,
+              "line": 1,
+              "offset": 22,
+            },
+            "start": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+          },
+          "type": "text",
+          "value": "address major bug",
+        },
+      ],
+      "position": Object {
+        "end": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "summary",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 33,
+              "line": 3,
+              "offset": 56,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 3,
+              "offset": 24,
+            },
+          },
+          "type": "text",
+          "value": "this is a free form body of text",
+        },
+      ],
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 4,
+          "offset": 57,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 24,
+        },
+      },
+      "type": "body",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 7,
+                  "line": 4,
+                  "offset": 63,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 4,
+                  "offset": 57,
+                },
+              },
+              "type": "type",
+              "value": "Author",
+            },
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 7,
+              "line": 4,
+              "offset": 63,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 4,
+              "offset": 63,
+            },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 8,
+              "line": 4,
+              "offset": 64,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 4,
+              "offset": 63,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 9,
+              "line": 4,
+              "offset": 65,
+            },
+            "start": Object {
+              "column": 8,
+              "line": 4,
+              "offset": 64,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 14,
+                  "line": 4,
+                  "offset": 70,
+                },
+                "start": Object {
+                  "column": 9,
+                  "line": 4,
+                  "offset": 65,
+                },
+              },
+              "type": "text",
+              "value": "@bcoe",
+            },
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 1,
+              "line": 5,
+              "offset": 71,
+            },
+            "start": Object {
+              "column": 9,
+              "line": 4,
+              "offset": 65,
+            },
+          },
+          "type": "value",
+        },
+      ],
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 5,
+          "offset": 71,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 4,
+          "offset": 57,
+        },
+      },
+      "type": "footer",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 5,
+                  "offset": 75,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 5,
+                  "offset": 71,
+                },
+              },
+              "type": "type",
+              "value": "Refs",
+            },
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 5,
+              "line": 5,
+              "offset": 75,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 5,
+              "offset": 75,
+            },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 7,
+              "line": 5,
+              "offset": 77,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 5,
+              "offset": 75,
+            },
+          },
+          "type": "separator",
+          "value": " #",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 10,
+                  "line": 5,
+                  "offset": 80,
+                },
+                "start": Object {
+                  "column": 7,
+                  "line": 5,
+                  "offset": 77,
+                },
+              },
+              "type": "text",
+              "value": "392",
+            },
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 10,
+              "line": 5,
+              "offset": 80,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 5,
+              "offset": 77,
+            },
+          },
+          "type": "value",
+        },
+      ],
+      "position": Object {
+        "end": Object {
+          "column": 10,
+          "line": 5,
+          "offset": 80,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 5,
+          "offset": 71,
+        },
+      },
+      "type": "footer",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 10,
+      "line": 5,
+      "offset": 80,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "message",
+}
+`;
+
+exports[`<message> <body>, <newline>*, <footer>+ parses footer after multi-line body 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 4,
+              "line": 1,
+              "offset": 3,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 1,
+              "offset": 0,
+            },
+          },
+          "type": "type",
+          "value": "fix",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 1,
+              "offset": 3,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 1,
+              "offset": 4,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 23,
+              "line": 1,
+              "offset": 22,
+            },
+            "start": Object {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+          },
+          "type": "text",
+          "value": "address major bug",
+        },
+      ],
+      "position": Object {
+        "end": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "summary",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 35,
+              "line": 3,
+              "offset": 58,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 3,
+              "offset": 24,
+            },
+          },
+          "type": "text",
+          "value": "this is the first line of the body",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 1,
+              "line": 4,
+              "offset": 59,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 4,
+              "offset": 59,
+            },
+          },
+          "type": "text",
+          "value": "",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 32,
+              "line": 5,
+              "offset": 91,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 5,
+              "offset": 60,
+            },
+          },
+          "type": "text",
+          "value": "this is the second line of body",
+        },
+      ],
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 6,
+          "offset": 92,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 24,
+        },
+      },
+      "type": "body",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 7,
+                  "line": 7,
+                  "offset": 99,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 7,
+                  "offset": 93,
+                },
+              },
+              "type": "type",
+              "value": "Author",
+            },
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 7,
+              "line": 7,
+              "offset": 99,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 7,
+              "offset": 99,
+            },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 8,
+              "line": 7,
+              "offset": 100,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 7,
+              "offset": 99,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 9,
+              "line": 7,
+              "offset": 101,
+            },
+            "start": Object {
+              "column": 8,
+              "line": 7,
+              "offset": 100,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 14,
+                  "line": 7,
+                  "offset": 106,
+                },
+                "start": Object {
+                  "column": 9,
+                  "line": 7,
+                  "offset": 101,
+                },
+              },
+              "type": "text",
+              "value": "@bcoe",
+            },
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 1,
+              "line": 8,
+              "offset": 107,
+            },
+            "start": Object {
+              "column": 9,
+              "line": 7,
+              "offset": 101,
+            },
+          },
+          "type": "value",
+        },
+      ],
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 8,
+          "offset": 107,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 7,
+          "offset": 93,
+        },
+      },
+      "type": "footer",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 8,
+                  "offset": 111,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 8,
+                  "offset": 107,
+                },
+              },
+              "type": "type",
+              "value": "Refs",
+            },
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 5,
+              "line": 8,
+              "offset": 111,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 8,
+              "offset": 111,
+            },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 7,
+              "line": 8,
+              "offset": 113,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 8,
+              "offset": 111,
+            },
+          },
+          "type": "separator",
+          "value": " #",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 10,
+                  "line": 8,
+                  "offset": 116,
+                },
+                "start": Object {
+                  "column": 7,
+                  "line": 8,
+                  "offset": 113,
+                },
+              },
+              "type": "text",
+              "value": "392",
+            },
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 10,
+              "line": 8,
+              "offset": 116,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 8,
+              "offset": 113,
+            },
+          },
+          "type": "value",
+        },
+      ],
+      "position": Object {
+        "end": Object {
+          "column": 10,
+          "line": 8,
+          "offset": 116,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 8,
+          "offset": 107,
+        },
+      },
+      "type": "footer",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 10,
+      "line": 8,
+      "offset": 116,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "message",
+}
+`;
+
 exports[`<message> <footer> parses BREAKING CHANGE literal as <token> 1`] = `
 Object {
   "children": Array [
@@ -89,24 +817,6 @@ Object {
         Object {
           "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 16,
-                      "line": 2,
-                      "offset": 38,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 2,
-                      "offset": 23,
-                    },
-                  },
-                  "type": "breaking-change",
-                  "value": "BREAKING CHANGE",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 16,
@@ -119,59 +829,59 @@ Object {
                   "offset": 23,
                 },
               },
-              "type": "token",
+              "type": "breaking-change",
+              "value": "BREAKING CHANGE",
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 17,
-                  "line": 2,
-                  "offset": 39,
-                },
-                "start": Object {
-                  "column": 16,
-                  "line": 2,
-                  "offset": 38,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 16,
+              "line": 2,
+              "offset": 38,
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 18,
-                  "line": 2,
-                  "offset": 40,
-                },
-                "start": Object {
-                  "column": 17,
-                  "line": 2,
-                  "offset": 39,
-                },
-              },
-              "type": "whitespace",
-              "value": " ",
+            "start": Object {
+              "column": 1,
+              "line": 2,
+              "offset": 23,
             },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 17,
+              "line": 2,
+              "offset": 39,
+            },
+            "start": Object {
+              "column": 16,
+              "line": 2,
+              "offset": 38,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 18,
+              "line": 2,
+              "offset": 40,
+            },
+            "start": Object {
+              "column": 17,
+              "line": 2,
+              "offset": 39,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
+        },
+        Object {
+          "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 41,
-                      "line": 2,
-                      "offset": 63,
-                    },
-                    "start": Object {
-                      "column": 18,
-                      "line": 2,
-                      "offset": 40,
-                    },
-                  },
-                  "type": "text",
-                  "value": "this change is breaking",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 41,
@@ -184,7 +894,8 @@ Object {
                   "offset": 40,
                 },
               },
-              "type": "value",
+              "type": "text",
+              "value": "this change is breaking",
             },
           ],
           "position": Object {
@@ -194,12 +905,12 @@ Object {
               "offset": 63,
             },
             "start": Object {
-              "column": 1,
+              "column": 18,
               "line": 2,
-              "offset": 23,
+              "offset": 40,
             },
           },
-          "type": "footer",
+          "type": "value",
         },
       ],
       "position": Object {
@@ -214,7 +925,7 @@ Object {
           "offset": 23,
         },
       },
-      "type": "body",
+      "type": "footer",
     },
   ],
   "position": Object {
@@ -322,105 +1033,87 @@ Object {
         Object {
           "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 4,
-                      "line": 2,
-                      "offset": 36,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 2,
-                      "offset": 33,
-                    },
-                  },
-                  "type": "type",
-                  "value": "fix",
-                },
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 11,
-                      "line": 2,
-                      "offset": 43,
-                    },
-                    "start": Object {
-                      "column": 5,
-                      "line": 2,
-                      "offset": 37,
-                    },
-                  },
-                  "type": "scope",
-                  "value": "parser",
-                },
-              ],
               "position": Object {
                 "end": Object {
-                  "column": 12,
+                  "column": 4,
                   "line": 2,
-                  "offset": 44,
+                  "offset": 36,
                 },
                 "start": Object {
-                  "column": 12,
+                  "column": 1,
                   "line": 2,
-                  "offset": 44,
+                  "offset": 33,
                 },
               },
-              "type": "token",
+              "type": "type",
+              "value": "fix",
             },
             Object {
               "position": Object {
                 "end": Object {
-                  "column": 13,
+                  "column": 11,
                   "line": 2,
-                  "offset": 45,
+                  "offset": 43,
                 },
                 "start": Object {
-                  "column": 12,
+                  "column": 5,
                   "line": 2,
-                  "offset": 44,
+                  "offset": 37,
                 },
               },
-              "type": "separator",
-              "value": ":",
+              "type": "scope",
+              "value": "parser",
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 14,
-                  "line": 2,
-                  "offset": 46,
-                },
-                "start": Object {
-                  "column": 13,
-                  "line": 2,
-                  "offset": 45,
-                },
-              },
-              "type": "whitespace",
-              "value": " ",
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 12,
+              "line": 2,
+              "offset": 44,
             },
+            "start": Object {
+              "column": 12,
+              "line": 2,
+              "offset": 44,
+            },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 13,
+              "line": 2,
+              "offset": 45,
+            },
+            "start": Object {
+              "column": 12,
+              "line": 2,
+              "offset": 44,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 14,
+              "line": 2,
+              "offset": 46,
+            },
+            "start": Object {
+              "column": 13,
+              "line": 2,
+              "offset": 45,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
+        },
+        Object {
+          "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 37,
-                      "line": 2,
-                      "offset": 69,
-                    },
-                    "start": Object {
-                      "column": 14,
-                      "line": 2,
-                      "offset": 46,
-                    },
-                  },
-                  "type": "text",
-                  "value": "address bug with parser",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 37,
@@ -433,7 +1126,8 @@ Object {
                   "offset": 46,
                 },
               },
-              "type": "value",
+              "type": "text",
+              "value": "address bug with parser",
             },
           ],
           "position": Object {
@@ -443,12 +1137,12 @@ Object {
               "offset": 69,
             },
             "start": Object {
-              "column": 1,
+              "column": 14,
               "line": 2,
-              "offset": 33,
+              "offset": 46,
             },
           },
-          "type": "footer",
+          "type": "value",
         },
       ],
       "position": Object {
@@ -463,7 +1157,7 @@ Object {
           "offset": 33,
         },
       },
-      "type": "body",
+      "type": "footer",
     },
   ],
   "position": Object {
@@ -571,56 +1265,38 @@ Object {
         Object {
           "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 5,
-                      "line": 2,
-                      "offset": 37,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 2,
-                      "offset": 33,
-                    },
-                  },
-                  "type": "type",
-                  "value": "feat",
+              "position": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 2,
+                  "offset": 37,
                 },
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 12,
-                      "line": 2,
-                      "offset": 44,
-                    },
-                    "start": Object {
-                      "column": 6,
-                      "line": 2,
-                      "offset": 38,
-                    },
-                  },
-                  "type": "scope",
-                  "value": "parser",
+                "start": Object {
+                  "column": 1,
+                  "line": 2,
+                  "offset": 33,
                 },
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 14,
-                      "line": 2,
-                      "offset": 46,
-                    },
-                    "start": Object {
-                      "column": 13,
-                      "line": 2,
-                      "offset": 45,
-                    },
-                  },
-                  "type": "breaking-change",
-                  "value": "!",
+              },
+              "type": "type",
+              "value": "feat",
+            },
+            Object {
+              "position": Object {
+                "end": Object {
+                  "column": 12,
+                  "line": 2,
+                  "offset": 44,
                 },
-              ],
+                "start": Object {
+                  "column": 6,
+                  "line": 2,
+                  "offset": 38,
+                },
+              },
+              "type": "scope",
+              "value": "parser",
+            },
+            Object {
               "position": Object {
                 "end": Object {
                   "column": 14,
@@ -628,64 +1304,64 @@ Object {
                   "offset": 46,
                 },
                 "start": Object {
-                  "column": 39,
+                  "column": 13,
                   "line": 2,
-                  "offset": 71,
+                  "offset": 45,
                 },
               },
-              "type": "token",
+              "type": "breaking-change",
+              "value": "!",
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 15,
-                  "line": 2,
-                  "offset": 47,
-                },
-                "start": Object {
-                  "column": 14,
-                  "line": 2,
-                  "offset": 46,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 14,
+              "line": 2,
+              "offset": 46,
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 16,
-                  "line": 2,
-                  "offset": 48,
-                },
-                "start": Object {
-                  "column": 15,
-                  "line": 2,
-                  "offset": 47,
-                },
-              },
-              "type": "whitespace",
-              "value": " ",
+            "start": Object {
+              "column": 39,
+              "line": 2,
+              "offset": 71,
             },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 15,
+              "line": 2,
+              "offset": 47,
+            },
+            "start": Object {
+              "column": 14,
+              "line": 2,
+              "offset": 46,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 16,
+              "line": 2,
+              "offset": 48,
+            },
+            "start": Object {
+              "column": 15,
+              "line": 2,
+              "offset": 47,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
+        },
+        Object {
+          "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 39,
-                      "line": 2,
-                      "offset": 71,
-                    },
-                    "start": Object {
-                      "column": 16,
-                      "line": 2,
-                      "offset": 48,
-                    },
-                  },
-                  "type": "text",
-                  "value": "address bug with parser",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 39,
@@ -698,7 +1374,8 @@ Object {
                   "offset": 48,
                 },
               },
-              "type": "value",
+              "type": "text",
+              "value": "address bug with parser",
             },
           ],
           "position": Object {
@@ -708,12 +1385,12 @@ Object {
               "offset": 71,
             },
             "start": Object {
-              "column": 1,
+              "column": 16,
               "line": 2,
-              "offset": 33,
+              "offset": 48,
             },
           },
-          "type": "footer",
+          "type": "value",
         },
       ],
       "position": Object {
@@ -728,7 +1405,7 @@ Object {
           "offset": 33,
         },
       },
-      "type": "body",
+      "type": "footer",
     },
   ],
   "position": Object {
@@ -836,24 +1513,6 @@ Object {
         Object {
           "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 12,
-                      "line": 3,
-                      "offset": 28,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 3,
-                      "offset": 17,
-                    },
-                  },
-                  "type": "type",
-                  "value": "External-Id",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 12,
@@ -861,64 +1520,64 @@ Object {
                   "offset": 28,
                 },
                 "start": Object {
-                  "column": 12,
+                  "column": 1,
                   "line": 3,
-                  "offset": 28,
+                  "offset": 17,
                 },
               },
-              "type": "token",
+              "type": "type",
+              "value": "External-Id",
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 13,
-                  "line": 3,
-                  "offset": 29,
-                },
-                "start": Object {
-                  "column": 12,
-                  "line": 3,
-                  "offset": 28,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 12,
+              "line": 3,
+              "offset": 28,
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 17,
-                  "line": 3,
-                  "offset": 33,
-                },
-                "start": Object {
-                  "column": 13,
-                  "line": 3,
-                  "offset": 29,
-                },
-              },
-              "type": "whitespace",
-              "value": "    ",
+            "start": Object {
+              "column": 12,
+              "line": 3,
+              "offset": 28,
             },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 13,
+              "line": 3,
+              "offset": 29,
+            },
+            "start": Object {
+              "column": 12,
+              "line": 3,
+              "offset": 28,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 17,
+              "line": 3,
+              "offset": 33,
+            },
+            "start": Object {
+              "column": 13,
+              "line": 3,
+              "offset": 29,
+            },
+          },
+          "type": "whitespace",
+          "value": "    ",
+        },
+        Object {
+          "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 21,
-                      "line": 3,
-                      "offset": 37,
-                    },
-                    "start": Object {
-                      "column": 17,
-                      "line": 3,
-                      "offset": 33,
-                    },
-                  },
-                  "type": "text",
-                  "value": "1337",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 21,
@@ -931,7 +1590,8 @@ Object {
                   "offset": 33,
                 },
               },
-              "type": "value",
+              "type": "text",
+              "value": "1337",
             },
           ],
           "position": Object {
@@ -941,12 +1601,12 @@ Object {
               "offset": 37,
             },
             "start": Object {
-              "column": 1,
+              "column": 17,
               "line": 3,
-              "offset": 17,
+              "offset": 33,
             },
           },
-          "type": "footer",
+          "type": "value",
         },
       ],
       "position": Object {
@@ -961,7 +1621,7 @@ Object {
           "offset": 17,
         },
       },
-      "type": "body",
+      "type": "footer",
     },
   ],
   "position": Object {
@@ -1069,24 +1729,6 @@ Object {
         Object {
           "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 12,
-                      "line": 3,
-                      "offset": 28,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 3,
-                      "offset": 17,
-                    },
-                  },
-                  "type": "type",
-                  "value": "External-Id",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 12,
@@ -1094,48 +1736,48 @@ Object {
                   "offset": 28,
                 },
                 "start": Object {
-                  "column": 12,
+                  "column": 1,
                   "line": 3,
-                  "offset": 28,
+                  "offset": 17,
                 },
               },
-              "type": "token",
+              "type": "type",
+              "value": "External-Id",
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 13,
-                  "line": 3,
-                  "offset": 29,
-                },
-                "start": Object {
-                  "column": 12,
-                  "line": 3,
-                  "offset": 28,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 12,
+              "line": 3,
+              "offset": 28,
             },
+            "start": Object {
+              "column": 12,
+              "line": 3,
+              "offset": 28,
+            },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 13,
+              "line": 3,
+              "offset": 29,
+            },
+            "start": Object {
+              "column": 12,
+              "line": 3,
+              "offset": 28,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 17,
-                      "line": 3,
-                      "offset": 33,
-                    },
-                    "start": Object {
-                      "column": 13,
-                      "line": 3,
-                      "offset": 29,
-                    },
-                  },
-                  "type": "text",
-                  "value": "1337",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 17,
@@ -1148,7 +1790,8 @@ Object {
                   "offset": 29,
                 },
               },
-              "type": "value",
+              "type": "text",
+              "value": "1337",
             },
           ],
           "position": Object {
@@ -1158,12 +1801,12 @@ Object {
               "offset": 33,
             },
             "start": Object {
-              "column": 1,
+              "column": 13,
               "line": 3,
-              "offset": 17,
+              "offset": 29,
             },
           },
-          "type": "footer",
+          "type": "value",
         },
       ],
       "position": Object {
@@ -1178,7 +1821,7 @@ Object {
           "offset": 17,
         },
       },
-      "type": "body",
+      "type": "footer",
     },
   ],
   "position": Object {
@@ -1286,24 +1929,6 @@ Object {
         Object {
           "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 7,
-                      "line": 2,
-                      "offset": 29,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 2,
-                      "offset": 23,
-                    },
-                  },
-                  "type": "type",
-                  "value": "Author",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 7,
@@ -1311,64 +1936,64 @@ Object {
                   "offset": 29,
                 },
                 "start": Object {
-                  "column": 7,
+                  "column": 1,
                   "line": 2,
-                  "offset": 29,
+                  "offset": 23,
                 },
               },
-              "type": "token",
+              "type": "type",
+              "value": "Author",
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 8,
-                  "line": 2,
-                  "offset": 30,
-                },
-                "start": Object {
-                  "column": 7,
-                  "line": 2,
-                  "offset": 29,
-                },
-              },
-              "type": "separator",
-              "value": ":",
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 7,
+              "line": 2,
+              "offset": 29,
             },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 9,
-                  "line": 2,
-                  "offset": 31,
-                },
-                "start": Object {
-                  "column": 8,
-                  "line": 2,
-                  "offset": 30,
-                },
-              },
-              "type": "whitespace",
-              "value": " ",
+            "start": Object {
+              "column": 7,
+              "line": 2,
+              "offset": 29,
             },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 8,
+              "line": 2,
+              "offset": 30,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 2,
+              "offset": 29,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 9,
+              "line": 2,
+              "offset": 31,
+            },
+            "start": Object {
+              "column": 8,
+              "line": 2,
+              "offset": 30,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
+        },
+        Object {
+          "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 18,
-                      "line": 2,
-                      "offset": 40,
-                    },
-                    "start": Object {
-                      "column": 9,
-                      "line": 2,
-                      "offset": 31,
-                    },
-                  },
-                  "type": "text",
-                  "value": "@byCedric",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 18,
@@ -1381,7 +2006,8 @@ Object {
                   "offset": 31,
                 },
               },
-              "type": "value",
+              "type": "text",
+              "value": "@byCedric",
             },
           ],
           "position": Object {
@@ -1391,12 +2017,12 @@ Object {
               "offset": 40,
             },
             "start": Object {
-              "column": 1,
+              "column": 9,
               "line": 2,
-              "offset": 23,
+              "offset": 31,
             },
           },
-          "type": "footer",
+          "type": "value",
         },
       ],
       "position": Object {
@@ -1411,7 +2037,7 @@ Object {
           "offset": 23,
         },
       },
-      "type": "body",
+      "type": "footer",
     },
   ],
   "position": Object {
@@ -1519,24 +2145,6 @@ Object {
         Object {
           "children": Array [
             Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 16,
-                      "line": 2,
-                      "offset": 38,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 2,
-                      "offset": 23,
-                    },
-                  },
-                  "type": "breaking-change",
-                  "value": "BREAKING CHANGE",
-                },
-              ],
               "position": Object {
                 "end": Object {
                   "column": 16,
@@ -1549,93 +2157,93 @@ Object {
                   "offset": 23,
                 },
               },
-              "type": "token",
+              "type": "breaking-change",
+              "value": "BREAKING CHANGE",
             },
+          ],
+          "position": Object {
+            "end": Object {
+              "column": 16,
+              "line": 2,
+              "offset": 38,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 2,
+              "offset": 23,
+            },
+          },
+          "type": "token",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 17,
+              "line": 2,
+              "offset": 39,
+            },
+            "start": Object {
+              "column": 16,
+              "line": 2,
+              "offset": 38,
+            },
+          },
+          "type": "separator",
+          "value": ":",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 18,
+              "line": 2,
+              "offset": 40,
+            },
+            "start": Object {
+              "column": 17,
+              "line": 2,
+              "offset": 39,
+            },
+          },
+          "type": "whitespace",
+          "value": " ",
+        },
+        Object {
+          "children": Array [
             Object {
               "position": Object {
                 "end": Object {
-                  "column": 17,
+                  "column": 47,
                   "line": 2,
-                  "offset": 39,
+                  "offset": 69,
                 },
                 "start": Object {
-                  "column": 16,
-                  "line": 2,
-                  "offset": 38,
-                },
-              },
-              "type": "separator",
-              "value": ":",
-            },
-            Object {
-              "position": Object {
-                "end": Object {
                   "column": 18,
                   "line": 2,
                   "offset": 40,
                 },
-                "start": Object {
-                  "column": 17,
-                  "line": 2,
-                  "offset": 39,
-                },
               },
-              "type": "whitespace",
-              "value": " ",
+              "type": "text",
+              "value": "first line of breaking change",
             },
             Object {
               "children": Array [
                 Object {
                   "position": Object {
                     "end": Object {
-                      "column": 47,
-                      "line": 2,
-                      "offset": 69,
+                      "column": 2,
+                      "line": 3,
+                      "offset": 71,
                     },
                     "start": Object {
-                      "column": 18,
-                      "line": 2,
-                      "offset": 40,
+                      "column": 1,
+                      "line": 3,
+                      "offset": 70,
                     },
                   },
-                  "type": "text",
-                  "value": "first line of breaking change",
+                  "type": "whitespace",
+                  "value": " ",
                 },
                 Object {
-                  "children": Array [
-                    Object {
-                      "position": Object {
-                        "end": Object {
-                          "column": 2,
-                          "line": 3,
-                          "offset": 71,
-                        },
-                        "start": Object {
-                          "column": 1,
-                          "line": 3,
-                          "offset": 70,
-                        },
-                      },
-                      "type": "whitespace",
-                      "value": " ",
-                    },
-                    Object {
-                      "position": Object {
-                        "end": Object {
-                          "column": 32,
-                          "line": 3,
-                          "offset": 101,
-                        },
-                        "start": Object {
-                          "column": 2,
-                          "line": 3,
-                          "offset": 71,
-                        },
-                      },
-                      "type": "text",
-                      "value": "second line of breaking change",
-                    },
-                  ],
                   "position": Object {
                     "end": Object {
                       "column": 32,
@@ -1643,48 +2251,48 @@ Object {
                       "offset": 101,
                     },
                     "start": Object {
-                      "column": 47,
-                      "line": 2,
-                      "offset": 69,
+                      "column": 2,
+                      "line": 3,
+                      "offset": 71,
                     },
                   },
-                  "type": "continuation",
+                  "type": "text",
+                  "value": "second line of breaking change",
+                },
+              ],
+              "position": Object {
+                "end": Object {
+                  "column": 32,
+                  "line": 3,
+                  "offset": 101,
+                },
+                "start": Object {
+                  "column": 47,
+                  "line": 2,
+                  "offset": 69,
+                },
+              },
+              "type": "continuation",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "position": Object {
+                    "end": Object {
+                      "column": 2,
+                      "line": 4,
+                      "offset": 103,
+                    },
+                    "start": Object {
+                      "column": 1,
+                      "line": 4,
+                      "offset": 102,
+                    },
+                  },
+                  "type": "whitespace",
+                  "value": " ",
                 },
                 Object {
-                  "children": Array [
-                    Object {
-                      "position": Object {
-                        "end": Object {
-                          "column": 2,
-                          "line": 4,
-                          "offset": 103,
-                        },
-                        "start": Object {
-                          "column": 1,
-                          "line": 4,
-                          "offset": 102,
-                        },
-                      },
-                      "type": "whitespace",
-                      "value": " ",
-                    },
-                    Object {
-                      "position": Object {
-                        "end": Object {
-                          "column": 31,
-                          "line": 4,
-                          "offset": 132,
-                        },
-                        "start": Object {
-                          "column": 2,
-                          "line": 4,
-                          "offset": 103,
-                        },
-                      },
-                      "type": "text",
-                      "value": "third line of breaking change",
-                    },
-                  ],
                   "position": Object {
                     "end": Object {
                       "column": 31,
@@ -1692,12 +2300,13 @@ Object {
                       "offset": 132,
                     },
                     "start": Object {
-                      "column": 32,
-                      "line": 3,
-                      "offset": 101,
+                      "column": 2,
+                      "line": 4,
+                      "offset": 103,
                     },
                   },
-                  "type": "continuation",
+                  "type": "text",
+                  "value": "third line of breaking change",
                 },
               ],
               "position": Object {
@@ -1707,12 +2316,12 @@ Object {
                   "offset": 132,
                 },
                 "start": Object {
-                  "column": 18,
-                  "line": 2,
-                  "offset": 40,
+                  "column": 32,
+                  "line": 3,
+                  "offset": 101,
                 },
               },
-              "type": "value",
+              "type": "continuation",
             },
           ],
           "position": Object {
@@ -1722,12 +2331,12 @@ Object {
               "offset": 132,
             },
             "start": Object {
-              "column": 1,
+              "column": 18,
               "line": 2,
-              "offset": 23,
+              "offset": 40,
             },
           },
-          "type": "footer",
+          "type": "value",
         },
       ],
       "position": Object {
@@ -1742,7 +2351,7 @@ Object {
           "offset": 23,
         },
       },
-      "type": "body",
+      "type": "footer",
     },
   ],
   "position": Object {
@@ -2557,9 +3166,9 @@ Object {
           "offset": 56,
         },
         "start": Object {
-          "column": 33,
+          "column": 1,
           "line": 3,
-          "offset": 56,
+          "offset": 24,
         },
       },
       "type": "body",
@@ -2691,9 +3300,9 @@ Object {
           "offset": 55,
         },
         "start": Object {
-          "column": 33,
+          "column": 1,
           "line": 2,
-          "offset": 55,
+          "offset": 23,
         },
       },
       "type": "body",
@@ -2704,750 +3313,6 @@ Object {
       "column": 33,
       "line": 2,
       "offset": 55,
-    },
-    "start": Object {
-      "column": 1,
-      "line": 1,
-      "offset": 0,
-    },
-  },
-  "type": "message",
-}
-`;
-
-exports[`<message> [<text>], <newline>, <footer>* parses footer after body 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 4,
-              "line": 1,
-              "offset": 3,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 1,
-              "offset": 0,
-            },
-          },
-          "type": "type",
-          "value": "fix",
-        },
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 5,
-              "line": 1,
-              "offset": 4,
-            },
-            "start": Object {
-              "column": 4,
-              "line": 1,
-              "offset": 3,
-            },
-          },
-          "type": "separator",
-          "value": ":",
-        },
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 6,
-              "line": 1,
-              "offset": 5,
-            },
-            "start": Object {
-              "column": 5,
-              "line": 1,
-              "offset": 4,
-            },
-          },
-          "type": "whitespace",
-          "value": " ",
-        },
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 23,
-              "line": 1,
-              "offset": 22,
-            },
-            "start": Object {
-              "column": 6,
-              "line": 1,
-              "offset": 5,
-            },
-          },
-          "type": "text",
-          "value": "address major bug",
-        },
-      ],
-      "position": Object {
-        "end": Object {
-          "column": 23,
-          "line": 1,
-          "offset": 22,
-        },
-        "start": Object {
-          "column": 1,
-          "line": 1,
-          "offset": 0,
-        },
-      },
-      "type": "summary",
-    },
-    Object {
-      "children": Array [
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 33,
-              "line": 3,
-              "offset": 56,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 3,
-              "offset": 24,
-            },
-          },
-          "type": "text",
-          "value": "this is a free form body of text",
-        },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 7,
-                      "line": 4,
-                      "offset": 63,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 4,
-                      "offset": 57,
-                    },
-                  },
-                  "type": "type",
-                  "value": "Author",
-                },
-              ],
-              "position": Object {
-                "end": Object {
-                  "column": 7,
-                  "line": 4,
-                  "offset": 63,
-                },
-                "start": Object {
-                  "column": 7,
-                  "line": 4,
-                  "offset": 63,
-                },
-              },
-              "type": "token",
-            },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 8,
-                  "line": 4,
-                  "offset": 64,
-                },
-                "start": Object {
-                  "column": 7,
-                  "line": 4,
-                  "offset": 63,
-                },
-              },
-              "type": "separator",
-              "value": ":",
-            },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 9,
-                  "line": 4,
-                  "offset": 65,
-                },
-                "start": Object {
-                  "column": 8,
-                  "line": 4,
-                  "offset": 64,
-                },
-              },
-              "type": "whitespace",
-              "value": " ",
-            },
-            Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 14,
-                      "line": 4,
-                      "offset": 70,
-                    },
-                    "start": Object {
-                      "column": 9,
-                      "line": 4,
-                      "offset": 65,
-                    },
-                  },
-                  "type": "text",
-                  "value": "@bcoe",
-                },
-              ],
-              "position": Object {
-                "end": Object {
-                  "column": 1,
-                  "line": 5,
-                  "offset": 71,
-                },
-                "start": Object {
-                  "column": 9,
-                  "line": 4,
-                  "offset": 65,
-                },
-              },
-              "type": "value",
-            },
-          ],
-          "position": Object {
-            "end": Object {
-              "column": 1,
-              "line": 5,
-              "offset": 71,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 4,
-              "offset": 57,
-            },
-          },
-          "type": "footer",
-        },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 5,
-                      "line": 5,
-                      "offset": 75,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 5,
-                      "offset": 71,
-                    },
-                  },
-                  "type": "type",
-                  "value": "Refs",
-                },
-              ],
-              "position": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 5,
-                  "offset": 75,
-                },
-                "start": Object {
-                  "column": 5,
-                  "line": 5,
-                  "offset": 75,
-                },
-              },
-              "type": "token",
-            },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 7,
-                  "line": 5,
-                  "offset": 77,
-                },
-                "start": Object {
-                  "column": 5,
-                  "line": 5,
-                  "offset": 75,
-                },
-              },
-              "type": "separator",
-              "value": " #",
-            },
-            Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 10,
-                      "line": 5,
-                      "offset": 80,
-                    },
-                    "start": Object {
-                      "column": 7,
-                      "line": 5,
-                      "offset": 77,
-                    },
-                  },
-                  "type": "text",
-                  "value": "392",
-                },
-              ],
-              "position": Object {
-                "end": Object {
-                  "column": 10,
-                  "line": 5,
-                  "offset": 80,
-                },
-                "start": Object {
-                  "column": 7,
-                  "line": 5,
-                  "offset": 77,
-                },
-              },
-              "type": "value",
-            },
-          ],
-          "position": Object {
-            "end": Object {
-              "column": 10,
-              "line": 5,
-              "offset": 80,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 5,
-              "offset": 71,
-            },
-          },
-          "type": "footer",
-        },
-      ],
-      "position": Object {
-        "end": Object {
-          "column": 10,
-          "line": 5,
-          "offset": 80,
-        },
-        "start": Object {
-          "column": 1,
-          "line": 4,
-          "offset": 57,
-        },
-      },
-      "type": "body",
-    },
-  ],
-  "position": Object {
-    "end": Object {
-      "column": 10,
-      "line": 5,
-      "offset": 80,
-    },
-    "start": Object {
-      "column": 1,
-      "line": 1,
-      "offset": 0,
-    },
-  },
-  "type": "message",
-}
-`;
-
-exports[`<message> [<text>], <newline>, <footer>* parses footer after multi-line body 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 4,
-              "line": 1,
-              "offset": 3,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 1,
-              "offset": 0,
-            },
-          },
-          "type": "type",
-          "value": "fix",
-        },
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 5,
-              "line": 1,
-              "offset": 4,
-            },
-            "start": Object {
-              "column": 4,
-              "line": 1,
-              "offset": 3,
-            },
-          },
-          "type": "separator",
-          "value": ":",
-        },
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 6,
-              "line": 1,
-              "offset": 5,
-            },
-            "start": Object {
-              "column": 5,
-              "line": 1,
-              "offset": 4,
-            },
-          },
-          "type": "whitespace",
-          "value": " ",
-        },
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 23,
-              "line": 1,
-              "offset": 22,
-            },
-            "start": Object {
-              "column": 6,
-              "line": 1,
-              "offset": 5,
-            },
-          },
-          "type": "text",
-          "value": "address major bug",
-        },
-      ],
-      "position": Object {
-        "end": Object {
-          "column": 23,
-          "line": 1,
-          "offset": 22,
-        },
-        "start": Object {
-          "column": 1,
-          "line": 1,
-          "offset": 0,
-        },
-      },
-      "type": "summary",
-    },
-    Object {
-      "children": Array [
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 35,
-              "line": 3,
-              "offset": 58,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 3,
-              "offset": 24,
-            },
-          },
-          "type": "text",
-          "value": "this is the first line of the body",
-        },
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 1,
-              "line": 4,
-              "offset": 59,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 4,
-              "offset": 59,
-            },
-          },
-          "type": "text",
-          "value": "",
-        },
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 32,
-              "line": 5,
-              "offset": 91,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 5,
-              "offset": 60,
-            },
-          },
-          "type": "text",
-          "value": "this is the second line of body",
-        },
-        Object {
-          "position": Object {
-            "end": Object {
-              "column": 1,
-              "line": 6,
-              "offset": 92,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 6,
-              "offset": 92,
-            },
-          },
-          "type": "text",
-          "value": "",
-        },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 7,
-                      "line": 7,
-                      "offset": 99,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 7,
-                      "offset": 93,
-                    },
-                  },
-                  "type": "type",
-                  "value": "Author",
-                },
-              ],
-              "position": Object {
-                "end": Object {
-                  "column": 7,
-                  "line": 7,
-                  "offset": 99,
-                },
-                "start": Object {
-                  "column": 7,
-                  "line": 7,
-                  "offset": 99,
-                },
-              },
-              "type": "token",
-            },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 8,
-                  "line": 7,
-                  "offset": 100,
-                },
-                "start": Object {
-                  "column": 7,
-                  "line": 7,
-                  "offset": 99,
-                },
-              },
-              "type": "separator",
-              "value": ":",
-            },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 9,
-                  "line": 7,
-                  "offset": 101,
-                },
-                "start": Object {
-                  "column": 8,
-                  "line": 7,
-                  "offset": 100,
-                },
-              },
-              "type": "whitespace",
-              "value": " ",
-            },
-            Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 14,
-                      "line": 7,
-                      "offset": 106,
-                    },
-                    "start": Object {
-                      "column": 9,
-                      "line": 7,
-                      "offset": 101,
-                    },
-                  },
-                  "type": "text",
-                  "value": "@bcoe",
-                },
-              ],
-              "position": Object {
-                "end": Object {
-                  "column": 1,
-                  "line": 8,
-                  "offset": 107,
-                },
-                "start": Object {
-                  "column": 9,
-                  "line": 7,
-                  "offset": 101,
-                },
-              },
-              "type": "value",
-            },
-          ],
-          "position": Object {
-            "end": Object {
-              "column": 1,
-              "line": 8,
-              "offset": 107,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 7,
-              "offset": 93,
-            },
-          },
-          "type": "footer",
-        },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 5,
-                      "line": 8,
-                      "offset": 111,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 8,
-                      "offset": 107,
-                    },
-                  },
-                  "type": "type",
-                  "value": "Refs",
-                },
-              ],
-              "position": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 8,
-                  "offset": 111,
-                },
-                "start": Object {
-                  "column": 5,
-                  "line": 8,
-                  "offset": 111,
-                },
-              },
-              "type": "token",
-            },
-            Object {
-              "position": Object {
-                "end": Object {
-                  "column": 7,
-                  "line": 8,
-                  "offset": 113,
-                },
-                "start": Object {
-                  "column": 5,
-                  "line": 8,
-                  "offset": 111,
-                },
-              },
-              "type": "separator",
-              "value": " #",
-            },
-            Object {
-              "children": Array [
-                Object {
-                  "position": Object {
-                    "end": Object {
-                      "column": 10,
-                      "line": 8,
-                      "offset": 116,
-                    },
-                    "start": Object {
-                      "column": 7,
-                      "line": 8,
-                      "offset": 113,
-                    },
-                  },
-                  "type": "text",
-                  "value": "392",
-                },
-              ],
-              "position": Object {
-                "end": Object {
-                  "column": 10,
-                  "line": 8,
-                  "offset": 116,
-                },
-                "start": Object {
-                  "column": 7,
-                  "line": 8,
-                  "offset": 113,
-                },
-              },
-              "type": "value",
-            },
-          ],
-          "position": Object {
-            "end": Object {
-              "column": 10,
-              "line": 8,
-              "offset": 116,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 8,
-              "offset": 107,
-            },
-          },
-          "type": "footer",
-        },
-      ],
-      "position": Object {
-        "end": Object {
-          "column": 10,
-          "line": 8,
-          "offset": 116,
-        },
-        "start": Object {
-          "column": 1,
-          "line": 4,
-          "offset": 59,
-        },
-      },
-      "type": "body",
-    },
-  ],
-  "position": Object {
-    "end": Object {
-      "column": 10,
-      "line": 8,
-      "offset": 116,
     },
     "start": Object {
       "column": 1,
