@@ -36,7 +36,7 @@ describe('utils', () => {
       const reference = parsed.references[0]
       assert.strictEqual(reference.issue, '34')
     })
-    it('does not populate reference, if it is non-numeric', () => {
+    it('does not populate reference if it is not numeric', () => {
       const parsed = toConventionalChangelogFormat(parser('foo: summary\n\nRefs #batman'))
       assert.strictEqual(parsed.references.length, 0)
     })
