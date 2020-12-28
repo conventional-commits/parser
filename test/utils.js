@@ -24,5 +24,21 @@ describe('utils', () => {
       assert.strictEqual(note.title, 'BREAKING CHANGE')
       assert.strictEqual(note.text, 'hello world')
     })
+    it('populates references entry from footer', () => {
+      const parsed = toConventionalChangelogFormat(parser('foo: summary\n\nRefs #34'))
+      assert.strictEqual(parsed.references.length, 1)
+      const reference = parsed.references[0]
+      assert.strictEqual(reference.issue, '34')
+    })
+    it('populates reference with ":" separator', () => {
+      const parsed = toConventionalChangelogFormat(parser('foo: summary\n\nRefs: #34'))
+      assert.strictEqual(parsed.references.length, 1)
+      const reference = parsed.references[0]
+      assert.strictEqual(reference.issue, '34')
+    })
+    it('does not populate reference if it is not numeric', () => {
+      const parsed = toConventionalChangelogFormat(parser('foo: summary\n\nRefs #batman'))
+      assert.strictEqual(parsed.references.length, 0)
+    })
   })
 })
