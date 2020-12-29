@@ -70,7 +70,9 @@ describe('<message>', () => {
       parsed.should.matchSnapshot()
     })
     it('parses BREAKING CHANGE literal as <token>', () => {
-      const parsed = parser('fix: address major bug\nBREAKING CHANGE: this change is breaking')
+      let parsed = parser('fix: address major bug\nBREAKING CHANGE: this change is breaking')
+      parsed.should.matchSnapshot()
+      parsed = parser('fix: address major bug\nBREAKING-CHANGE: this change is breaking')
       parsed.should.matchSnapshot()
     })
     it('supports multiline BREAKING CHANGES, via continuation', () => {
@@ -102,9 +104,23 @@ describe('<message>', () => {
       assertNodePositions('fix: address major bug\n\nthis is a free form body of text')
     })
   })
+  describe('<body>', () => {
+    it('parses BREAKING CHANGE at start of body', () => {
+      const parsed = parser('feat: breaking change\n\nBREAKING CHANGE: introduces breaking change\nsecond line')
+      parsed.should.matchSnapshot()
+    })
+  })
   describe('<body>, <newline>*, <footer>+', () => {
     it('parses footer after body', () => {
       const parsed = parser('fix: address major bug\n\nthis is a free form body of text\nAuthor: @bcoe\nRefs #392')
+      parsed.should.matchSnapshot()
+    })
+    it('parses footer after body containing BREAKING CHANGE', () => {
+      const parsed = parser('fix: address major bug\n\nBREAKING CHANGE: this is breaking.\nthis is a free form body of text\nAuthor: @bcoe\nRefs #392')
+      parsed.should.matchSnapshot()
+    })
+    it('parses BREAKING CHANGE footers with higher precedence than body', () => {
+      const parsed = parser('fix: address major bug\n\nBREAKING CHANGE: this is breaking.\n\nAuthor: @bcoe\nRefs #392')
       parsed.should.matchSnapshot()
     })
     it('parses footer after multi-line body', () => {
