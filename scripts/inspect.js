@@ -11,6 +11,7 @@ yargs
   })
   .command('cc <message>', 'output conventional changelog format commit', () => {}, (argv) => {
     const cc = toConventionalChangelogFormat(parser(argv.message))
+    console.log('-----')
     console.log(JSON.stringify(cc, null, 2))
   })
   .parse()
