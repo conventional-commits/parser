@@ -5,6 +5,7 @@
   "main": "index.js",
   "files": [
     "lib",
+    "index.d.ts",
     "index.js"
   ],
   "types": "index.d.ts",
