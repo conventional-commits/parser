@@ -5,8 +5,10 @@
   "main": "index.js",
   "files": [
     "lib",
+    "index.d.ts",
     "index.js"
   ],
+  "types": "index.d.ts",
   "scripts": {
     "test": "c8 mocha ./test/*.js",
     "test:snap": "CHAI_JEST_SNAPSHOT_UPDATE_ALL=true npm test",
