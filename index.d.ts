@@ -1,5 +1,20 @@
 export function parser(commitText: string): Message;
-interface ConventionalChangelogCommit {
+
+export interface Note {
+  title: string,
+  text: string
+}
+
+export interface Reference {
+  action: string;
+  owner?: string;
+  repository?: string;
+  issue: string;
+  raw?: string;
+  prefix: string;
+}
+
+export interface ConventionalChangelogCommit {
   type: string;
   scope: string | null;
   subject: string;
@@ -8,10 +23,11 @@ interface ConventionalChangelogCommit {
   body: string | null;
   footer: string | null;
   notes: Note[];
-  references: object[];
+  references: Reference[];
   mentions: string[];
   revert: boolean | null;
 }
+
 export function toConventionalChangelogFormat(ast: Message): ConventionalChangelogCommit;
 
 // unist core - copied from @types/unist
