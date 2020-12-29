@@ -75,7 +75,7 @@ in sync with the written specification on conventionalcommits.org.
 <body>            ::= [<any body-text except pre-footer>], <newline>, <body>*
                    |  [<any body-text except pre-footer>]
 /* For convenience the <breaking-change>, <separator>, <whitespace>, and
- * <text> tokens of <body-text> should be appended as children to <body>. */
+ * <text> tokens of <body-text> should be appended as children to <body> */
 <body-text>       ::= [<breaking-change>, ":", <whitespace>*], text
 /* Note: <pre-footer> is used during parsing, but not returned in the AST. */
 <pre-footer>      ::= <newline>*, <footer>+
