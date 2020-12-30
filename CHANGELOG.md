@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/conventional-commits/parser/compare/v0.2.0...v0.3.0) (2020-12-30)
+
+
+### Features
+
+* **conventional-changelog:** handle BREAKING CHANGE in footer and body ([#32](https://www.github.com/conventional-commits/parser/issues/32)) ([5ad6785](https://www.github.com/conventional-commits/parser/commit/5ad678567d429174e1ec1eb709a6dd6547f6f2a8))
+* support BREAKING CHANGE in body ([#30](https://www.github.com/conventional-commits/parser/issues/30)) ([8f3f5c7](https://www.github.com/conventional-commits/parser/commit/8f3f5c77fec0bea267d92bd0ca71ed8b49edf5a9))
+* **types:** add TypeScript definitions ([#29](https://www.github.com/conventional-commits/parser/issues/29)) ([2a2474b](https://www.github.com/conventional-commits/parser/commit/2a2474b1bfe700d693b495cb3498fa9163801d7a))
+
 ## [0.2.0](https://www.github.com/conventional-commits/parser/compare/v0.1.0...v0.2.0) (2020-12-28)
 
 
