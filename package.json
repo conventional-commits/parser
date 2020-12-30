@@ -1,6 +1,6 @@
 {
   "name": "@conventional-commits/parser",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "reference implementation of conventionalcommits.org spec",
   "main": "index.js",
   "files": [
