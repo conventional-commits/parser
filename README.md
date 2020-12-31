@@ -60,8 +60,8 @@ in sync with the written specification on conventionalcommits.org.
 /* Any non-newline whitespace: */
 <whitespace>      ::= <ZWNBSP> | <TAB> | <VT> | <FF> | <SP> | <NBSP> | <USP>
 
-<message>         ::= <summary>, <newline>+, <body>, <newline>*, <footer>+
-                   |  <summary>, <newline>*, <footer>+
+<message>         ::= <summary>, <newline>+, <body>, (<newline>+, <footer>)*
+                   |  <summary>, (<newline>+, <footer>)*
                    |  <summary>, <newline>*
 
 /* "!" should be added to the AST as a <breaking-change> node with the value "!" */
@@ -78,9 +78,9 @@ in sync with the written specification on conventionalcommits.org.
  * <text> tokens of <body-text> should be appended as children to <body> */
 <body-text>       ::= [<breaking-change>, ":", <whitespace>*], text
 /* Note: <pre-footer> is used during parsing, but not returned in the AST. */
-<pre-footer>      ::= <newline>*, <footer>+
+<pre-footer>      ::= <newline>+, <footer>
 
-<footer>          ::= <token>, <separator>, <whitespace>*, <value>, [<newline>]
+<footer>          ::= <token>, <separator>, <whitespace>*, <value>
 /* "!" should be added to the AST as a <breaking-change> node with the value "!" */
 <token>           ::= <breaking-change>
                    |  <type>, "(" <scope> ")", ["!"]
