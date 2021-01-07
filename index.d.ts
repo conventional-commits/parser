@@ -67,7 +67,7 @@ export interface Parent extends Node {
 
 export interface Message extends Parent {
   type: 'message';
-  children: (Summary | Body)[];
+  children: (Summary | Body | Newline | Footer)[];
 }
 
 export interface Text extends Literal {
@@ -75,9 +75,14 @@ export interface Text extends Literal {
   value: string;
 }
 
+export interface Newline extends Literal {
+  type: 'newline';
+  value: string;
+}
+
 export interface BreakingChange extends Literal {
   type: 'breaking-change';
-  value: '!' | 'BREAKING CHANGE';
+  value: '!' | 'BREAKING-CHANGE' | 'BREAKING CHANGE';
 }
 
 export interface Summary extends Parent {
@@ -102,7 +107,7 @@ export interface Separator extends Literal {
 
 export interface Body extends Parent {
   type: 'body';
-  children: (Text | Footer)[];
+  children: (Text | Newline)[];
 }
 
 export interface Footer extends Parent {
@@ -122,5 +127,5 @@ export interface Value extends Parent {
 
 export interface Continuation extends Parent {
   type: 'continuation';
-  children: Text[];
+  children: (Newline | Text)[];
 }
