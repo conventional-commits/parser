@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.4.1](https://www.github.com/conventional-commits/parser/compare/v0.4.0...v0.4.1) (2021-01-07)
+
+
+### Bug Fixes
+
+* **types:** add missing Newline types ([#35](https://www.github.com/conventional-commits/parser/issues/35)) ([6f3f696](https://www.github.com/conventional-commits/parser/commit/6f3f69622191711df1ea419c73ef0770d0b36ba7))
+
 ## [0.4.0](https://www.github.com/conventional-commits/parser/compare/v0.3.0...v0.4.0) (2021-01-07)
 
 
