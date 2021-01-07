@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://www.github.com/conventional-commits/parser/compare/v0.3.0...v0.4.0) (2021-01-07)
+
+
+### Features
+
+* add greedy newline tokenizer ([#25](https://www.github.com/conventional-commits/parser/issues/25)) ([5b12227](https://www.github.com/conventional-commits/parser/commit/5b12227426d8c2f0ec3c88eb58ba8cf76d76246a))
+
 ## [0.3.0](https://www.github.com/conventional-commits/parser/compare/v0.2.0...v0.3.0) (2020-12-30)
 
 
