@@ -85,6 +85,24 @@ Object {
       "type": "summary",
     },
     Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 23,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 1,
+          "offset": 21,
+        },
+      },
+      "type": "newline",
+      "value": "
+
+",
+    },
+    Object {
       "children": Array [
         Object {
           "position": Object {
@@ -149,6 +167,23 @@ Object {
           },
           "type": "text",
           "value": "introduces breaking change",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 1,
+              "line": 4,
+              "offset": 67,
+            },
+            "start": Object {
+              "column": 44,
+              "line": 3,
+              "offset": 66,
+            },
+          },
+          "type": "newline",
+          "value": "
+",
         },
         Object {
           "position": Object {
@@ -283,6 +318,24 @@ Object {
       "type": "summary",
     },
     Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 24,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+      },
+      "type": "newline",
+      "value": "
+
+",
+    },
+    Object {
       "children": Array [
         Object {
           "children": Array [
@@ -370,9 +423,9 @@ Object {
           ],
           "position": Object {
             "end": Object {
-              "column": 1,
-              "line": 4,
-              "offset": 59,
+              "column": 35,
+              "line": 3,
+              "offset": 58,
             },
             "start": Object {
               "column": 18,
@@ -385,9 +438,9 @@ Object {
       ],
       "position": Object {
         "end": Object {
-          "column": 1,
-          "line": 5,
-          "offset": 60,
+          "column": 35,
+          "line": 3,
+          "offset": 58,
         },
         "start": Object {
           "column": 1,
@@ -396,6 +449,24 @@ Object {
         },
       },
       "type": "footer",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 5,
+          "offset": 60,
+        },
+        "start": Object {
+          "column": 35,
+          "line": 3,
+          "offset": 58,
+        },
+      },
+      "type": "newline",
+      "value": "
+
+",
     },
     Object {
       "children": Array [
@@ -485,9 +556,9 @@ Object {
           ],
           "position": Object {
             "end": Object {
-              "column": 1,
-              "line": 6,
-              "offset": 74,
+              "column": 14,
+              "line": 5,
+              "offset": 73,
             },
             "start": Object {
               "column": 9,
@@ -500,9 +571,9 @@ Object {
       ],
       "position": Object {
         "end": Object {
-          "column": 1,
-          "line": 6,
-          "offset": 74,
+          "column": 14,
+          "line": 5,
+          "offset": 73,
         },
         "start": Object {
           "column": 1,
@@ -511,6 +582,23 @@ Object {
         },
       },
       "type": "footer",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 6,
+          "offset": 74,
+        },
+        "start": Object {
+          "column": 14,
+          "line": 5,
+          "offset": 73,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
@@ -713,6 +801,24 @@ Object {
       "type": "summary",
     },
     Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 24,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+      },
+      "type": "newline",
+      "value": "
+
+",
+    },
+    Object {
       "children": Array [
         Object {
           "position": Object {
@@ -733,9 +839,9 @@ Object {
       ],
       "position": Object {
         "end": Object {
-          "column": 1,
-          "line": 4,
-          "offset": 57,
+          "column": 33,
+          "line": 3,
+          "offset": 56,
         },
         "start": Object {
           "column": 1,
@@ -744,6 +850,23 @@ Object {
         },
       },
       "type": "body",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 4,
+          "offset": 57,
+        },
+        "start": Object {
+          "column": 33,
+          "line": 3,
+          "offset": 56,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
@@ -833,9 +956,9 @@ Object {
           ],
           "position": Object {
             "end": Object {
-              "column": 1,
-              "line": 5,
-              "offset": 71,
+              "column": 14,
+              "line": 4,
+              "offset": 70,
             },
             "start": Object {
               "column": 9,
@@ -848,9 +971,9 @@ Object {
       ],
       "position": Object {
         "end": Object {
-          "column": 1,
-          "line": 5,
-          "offset": 71,
+          "column": 14,
+          "line": 4,
+          "offset": 70,
         },
         "start": Object {
           "column": 1,
@@ -859,6 +982,23 @@ Object {
         },
       },
       "type": "footer",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 5,
+          "offset": 71,
+        },
+        "start": Object {
+          "column": 14,
+          "line": 4,
+          "offset": 70,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
@@ -1061,6 +1201,24 @@ Object {
       "type": "summary",
     },
     Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 24,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+      },
+      "type": "newline",
+      "value": "
+
+",
+    },
+    Object {
       "children": Array [
         Object {
           "position": Object {
@@ -1129,6 +1287,23 @@ Object {
         Object {
           "position": Object {
             "end": Object {
+              "column": 1,
+              "line": 4,
+              "offset": 59,
+            },
+            "start": Object {
+              "column": 35,
+              "line": 3,
+              "offset": 58,
+            },
+          },
+          "type": "newline",
+          "value": "
+",
+        },
+        Object {
+          "position": Object {
+            "end": Object {
               "column": 33,
               "line": 4,
               "offset": 91,
@@ -1145,9 +1320,9 @@ Object {
       ],
       "position": Object {
         "end": Object {
-          "column": 1,
-          "line": 5,
-          "offset": 92,
+          "column": 33,
+          "line": 4,
+          "offset": 91,
         },
         "start": Object {
           "column": 1,
@@ -1156,6 +1331,23 @@ Object {
         },
       },
       "type": "body",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 5,
+          "offset": 92,
+        },
+        "start": Object {
+          "column": 33,
+          "line": 4,
+          "offset": 91,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
@@ -1245,9 +1437,9 @@ Object {
           ],
           "position": Object {
             "end": Object {
-              "column": 1,
-              "line": 6,
-              "offset": 106,
+              "column": 14,
+              "line": 5,
+              "offset": 105,
             },
             "start": Object {
               "column": 9,
@@ -1260,9 +1452,9 @@ Object {
       ],
       "position": Object {
         "end": Object {
-          "column": 1,
-          "line": 6,
-          "offset": 106,
+          "column": 14,
+          "line": 5,
+          "offset": 105,
         },
         "start": Object {
           "column": 1,
@@ -1271,6 +1463,23 @@ Object {
         },
       },
       "type": "footer",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 6,
+          "offset": 106,
+        },
+        "start": Object {
+          "column": 14,
+          "line": 5,
+          "offset": 105,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
@@ -1473,6 +1682,24 @@ Object {
       "type": "summary",
     },
     Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 24,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+      },
+      "type": "newline",
+      "value": "
+
+",
+    },
+    Object {
       "children": Array [
         Object {
           "position": Object {
@@ -1494,17 +1721,19 @@ Object {
           "position": Object {
             "end": Object {
               "column": 1,
-              "line": 4,
-              "offset": 59,
+              "line": 5,
+              "offset": 60,
             },
             "start": Object {
-              "column": 1,
-              "line": 4,
-              "offset": 59,
+              "column": 35,
+              "line": 3,
+              "offset": 58,
             },
           },
-          "type": "text",
-          "value": "",
+          "type": "newline",
+          "value": "
+
+",
         },
         Object {
           "position": Object {
@@ -1525,9 +1754,9 @@ Object {
       ],
       "position": Object {
         "end": Object {
-          "column": 1,
-          "line": 6,
-          "offset": 92,
+          "column": 32,
+          "line": 5,
+          "offset": 91,
         },
         "start": Object {
           "column": 1,
@@ -1536,6 +1765,24 @@ Object {
         },
       },
       "type": "body",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 7,
+          "offset": 93,
+        },
+        "start": Object {
+          "column": 32,
+          "line": 5,
+          "offset": 91,
+        },
+      },
+      "type": "newline",
+      "value": "
+
+",
     },
     Object {
       "children": Array [
@@ -1625,9 +1872,9 @@ Object {
           ],
           "position": Object {
             "end": Object {
-              "column": 1,
-              "line": 8,
-              "offset": 107,
+              "column": 14,
+              "line": 7,
+              "offset": 106,
             },
             "start": Object {
               "column": 9,
@@ -1640,9 +1887,9 @@ Object {
       ],
       "position": Object {
         "end": Object {
-          "column": 1,
-          "line": 8,
-          "offset": 107,
+          "column": 14,
+          "line": 7,
+          "offset": 106,
         },
         "start": Object {
           "column": 1,
@@ -1651,6 +1898,23 @@ Object {
         },
       },
       "type": "footer",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 8,
+          "offset": 107,
+        },
+        "start": Object {
+          "column": 14,
+          "line": 7,
+          "offset": 106,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
@@ -1851,6 +2115,23 @@ Object {
         },
       },
       "type": "summary",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 2,
+          "offset": 23,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
@@ -2069,6 +2350,23 @@ Object {
       "type": "summary",
     },
     Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 2,
+          "offset": 23,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
+    },
+    Object {
       "children": Array [
         Object {
           "children": Array [
@@ -2283,6 +2581,23 @@ Object {
         },
       },
       "type": "summary",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 2,
+          "offset": 33,
+        },
+        "start": Object {
+          "column": 33,
+          "line": 1,
+          "offset": 32,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
@@ -2515,6 +2830,23 @@ Object {
         },
       },
       "type": "summary",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 2,
+          "offset": 33,
+        },
+        "start": Object {
+          "column": 33,
+          "line": 1,
+          "offset": 32,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
@@ -2765,6 +3097,24 @@ Object {
       "type": "summary",
     },
     Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 17,
+        },
+        "start": Object {
+          "column": 16,
+          "line": 1,
+          "offset": 15,
+        },
+      },
+      "type": "newline",
+      "value": "
+
+",
+    },
+    Object {
       "children": Array [
         Object {
           "children": Array [
@@ -2981,6 +3331,24 @@ Object {
       "type": "summary",
     },
     Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 17,
+        },
+        "start": Object {
+          "column": 16,
+          "line": 1,
+          "offset": 15,
+        },
+      },
+      "type": "newline",
+      "value": "
+
+",
+    },
+    Object {
       "children": Array [
         Object {
           "children": Array [
@@ -3179,6 +3547,23 @@ Object {
         },
       },
       "type": "summary",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 2,
+          "offset": 23,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
@@ -3397,6 +3782,23 @@ Object {
       "type": "summary",
     },
     Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 2,
+          "offset": 23,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
+    },
+    Object {
       "children": Array [
         Object {
           "children": Array [
@@ -3486,6 +3888,23 @@ Object {
                 Object {
                   "position": Object {
                     "end": Object {
+                      "column": 1,
+                      "line": 3,
+                      "offset": 70,
+                    },
+                    "start": Object {
+                      "column": 47,
+                      "line": 2,
+                      "offset": 69,
+                    },
+                  },
+                  "type": "newline",
+                  "value": "
+",
+                },
+                Object {
+                  "position": Object {
+                    "end": Object {
                       "column": 2,
                       "line": 3,
                       "offset": 71,
@@ -3532,6 +3951,23 @@ Object {
             },
             Object {
               "children": Array [
+                Object {
+                  "position": Object {
+                    "end": Object {
+                      "column": 1,
+                      "line": 4,
+                      "offset": 102,
+                    },
+                    "start": Object {
+                      "column": 32,
+                      "line": 3,
+                      "offset": 101,
+                    },
+                  },
+                  "type": "newline",
+                  "value": "
+",
+                },
                 Object {
                   "position": Object {
                     "end": Object {
@@ -4397,6 +4833,24 @@ Object {
       "type": "summary",
     },
     Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 24,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+      },
+      "type": "newline",
+      "value": "
+
+",
+    },
+    Object {
       "children": Array [
         Object {
           "position": Object {
@@ -4529,6 +4983,23 @@ Object {
         },
       },
       "type": "summary",
+    },
+    Object {
+      "position": Object {
+        "end": Object {
+          "column": 1,
+          "line": 2,
+          "offset": 23,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+          "offset": 22,
+        },
+      },
+      "type": "newline",
+      "value": "
+",
     },
     Object {
       "children": Array [
