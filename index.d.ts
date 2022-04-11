@@ -87,7 +87,7 @@ export interface BreakingChange extends Literal {
 
 export interface Summary extends Parent {
   type: 'summary';
-  children: (Type | Scope | Separator)[];
+  children: (Type | Scope | Separator | Text)[];
 }
 
 export interface Type extends Literal {
