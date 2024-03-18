@@ -131,6 +131,12 @@ describe('<message>', () => {
       assertNodePositions('fix: address major bug\n\nthis is the first line of the body\n\nthis is the second line of body\n\nAuthor: @bcoe\nRefs #392')
     })
   })
+  describe('issues', () => {
+    it('#tbd Renovate commit fails to parse', () => {
+      const parsed = parser(`fix(foo): some renovate commit\n\nfoo(\n)`)
+      console.log(parsed)
+    })
+  })
 })
 
 function assertNodePositions (text) {
