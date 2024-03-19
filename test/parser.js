@@ -132,9 +132,14 @@ describe('<message>', () => {
     })
   })
   describe('issues', () => {
-    it('#tbd Renovate commit fails to parse', () => {
+    it('#48 Fails to parse when body includes something that looks like a scope', () => {
       const parsed = parser(`fix(foo): some renovate commit\n\nfoo(\n)`)
-      console.log(parsed)
+
+      expect(parsed).to.have.nested.property('children[2].type', 'body')
+      expect(parsed).to.have.nested.property('children[2].children[0]').to.deep.include({ type: 'text', value: 'foo(' })
+      expect(parsed).to.have.nested.property('children[2].children[1]').to.deep.include({ type: 'newline', value: '\n' })
+      expect(parsed).to.have.nested.property('children[2].children[2]').to.deep.include({ type: 'text', value: ')' })
+
     })
   })
 })
