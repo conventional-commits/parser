@@ -139,7 +139,6 @@ describe('<message>', () => {
       expect(parsed).to.have.nested.property('children[2].children[0]').to.deep.include({ type: 'text', value: 'foo(' })
       expect(parsed).to.have.nested.property('children[2].children[1]').to.deep.include({ type: 'newline', value: '\n' })
       expect(parsed).to.have.nested.property('children[2].children[2]').to.deep.include({ type: 'text', value: ')' })
-
     })
   })
 })
