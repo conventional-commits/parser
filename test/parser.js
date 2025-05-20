@@ -131,6 +131,16 @@ describe('<message>', () => {
       assertNodePositions('fix: address major bug\n\nthis is the first line of the body\n\nthis is the second line of body\n\nAuthor: @bcoe\nRefs #392')
     })
   })
+  describe('issues', () => {
+    it('#48 Fails to parse when body includes something that looks like a scope', () => {
+      const parsed = parser(`fix(foo): some renovate commit\n\nfoo(\n)`)
+
+      expect(parsed).to.have.nested.property('children[2].type', 'body')
+      expect(parsed).to.have.nested.property('children[2].children[0]').to.deep.include({ type: 'text', value: 'foo(' })
+      expect(parsed).to.have.nested.property('children[2].children[1]').to.deep.include({ type: 'newline', value: '\n' })
+      expect(parsed).to.have.nested.property('children[2].children[2]').to.deep.include({ type: 'text', value: ')' })
+    })
+  })
 })
 
 function assertNodePositions (text) {
